@@ -14,7 +14,7 @@ public class _008_FilesReadTextToRDD1 {
         JavaSparkContext sc = new JavaSparkContext(sparkConf);
 
         // provide text file paths to be read to RDD, separated by comma
-        String files = "data/rdd/input/file1.txt,data/rdd/input/file2.txt,data/rdd/input/file3.txt";
+        String files = "data/rdd/input/myfile1.txt,data/rdd/input/myfile2.txt,data/rdd/input/myfile3.txt";
 
         // read text files to RDD
         JavaRDD<String> lines = sc.textFile(files);
