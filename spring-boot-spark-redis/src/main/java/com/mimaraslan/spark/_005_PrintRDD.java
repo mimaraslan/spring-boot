@@ -16,7 +16,7 @@ public class _005_PrintRDD {
         JavaSparkContext sc = new JavaSparkContext(sparkConf);
 
         // read text files to RDD
-        JavaRDD<String> lines = sc.textFile("data/rdd/input/file1.txt");
+        JavaRDD<String> lines = sc.textFile("data/rdd/input/myfile1.txt");
 
         lines.foreach(new VoidFunction<String>() {
             public void call(String line) {

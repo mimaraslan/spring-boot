@@ -17,13 +17,13 @@ public class _003_SparkTest3 {
 		JavaSparkContext sc = new JavaSparkContext("local", "Count files");
 
 		String directory = System.getProperty("user.home");
-		String fileName = "/Documents/workspace/spring-boot/spring-boot-spark/src/data/mydata.txt";
-		String absolutePath = directory + File.separator + fileName;
 
+		//	String fileName = "data/rdd/input/mysample.txt";
+		//	String absolutePath = directory + File.separator + fileName;
 
-		JavaRDD<String> textFileRDD = sc.textFile("/home/mimaraslan/Documents/workspace/spring-boot/spring-boot-spark/src/data/mytestdata.txt");
+		JavaRDD<String> textFileRDD = sc.textFile("data/rdd/input/mysample.txt");
 
-		System.out.println("lolo Count:" + textFileRDD.count());
+		System.out.println("Count:" + textFileRDD.count());
 		sc.close();
 	}
 }

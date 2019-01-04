@@ -18,7 +18,7 @@ public class _007_FileReadTextToRDD {
         JavaSparkContext sc = new JavaSparkContext(sparkConf);
 
         // provide path to input text file
-        String path = "data/rdd/input/file1.txt";
+        String path = "data/rdd/input/myfile1.txt";
 
         // read text file to RDD
         JavaRDD<String> lines = sc.textFile(path);
