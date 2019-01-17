@@ -7,7 +7,7 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 import java.text.*;
 import java.util.*;
 
-public class _004_ProducerApp {
+public class _003_ProducerApp {
 
     public static void main(String[] args){
         // Create the Properties class to instantiate the Consumer with the desired settings:

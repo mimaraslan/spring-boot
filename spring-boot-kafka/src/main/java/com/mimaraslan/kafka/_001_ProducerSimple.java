@@ -6,8 +6,8 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 
 import java.util.Properties;
 
-//Create java class named "_003_ProducerSimple"
-public class _003_ProducerSimple {
+//Create java class named "_001_ProducerSimple"
+public class _001_ProducerSimple {
 
     public static void main(String[] args) throws Exception{
 

@@ -7,7 +7,7 @@ import org.apache.kafka.common.TopicPartition;
 
 import java.util.*;
 
-public class _001_ConsumerApp {
+public class _004_ConsumerApp {
 
     public static void main(String[] args){
         // Create the Properties class to instantiate the Consumer with the desired settings:

@@ -6,7 +6,7 @@ import org.apache.kafka.clients.consumer.KafkaConsumer;
 
 import java.util.*;
 
-public class _002_ConsumerGroupApp {
+public class _006_ConsumerGroupApp {
 
     public static void main(String[] args){
 
