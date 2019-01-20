@@ -40,13 +40,12 @@ public class _003_ProducerApp {
 
         try {
             for (int i = 0; i < numberOfRecords; i++){
-                   myProducer.send(new ProducerRecord<String, String>(topicName,
-                          String.format("Message: %s  sent at %s", Integer.toString(i), dtFormat.format(new Date()))));
-
+                myProducer.send(new ProducerRecord<String, String>(topicName, String.format("Message: %s  sent at %s", Integer.toString(i), dtFormat.format(new Date()))));
 
             Thread.sleep(sleepTimer);
-                  // Thread.sleep(new Random(5000).nextLong()); // use if you want to randomize the time between record sends
-            }
+                // use if you want to randomize the time between record sends
+                // Thread.sleep(new Random(5000).nextLong());
+                 }
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

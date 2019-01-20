@@ -34,7 +34,6 @@ public class _006_ConsumerGroupApp {
         props.put("retry.backoff.ms", 100);
         props.put("client.id", "");
 
-
         // Create a KafkaConsumer instance and configure it with properties.
         KafkaConsumer<String, String> myConsumer = new KafkaConsumer<String, String>(props);
 
@@ -59,7 +58,6 @@ public class _006_ConsumerGroupApp {
         } finally {
             myConsumer.close();
         }
-
     }
 
     private static void printSet(Set<String> collection){

@@ -43,12 +43,18 @@ public class _005_ProducerBatchApp {
                             new ProducerRecord<String, String>(topic, String.format("Batch: %s || %s", Integer.toString(batchNumber), dtFormat.format(new Date())))
                     );
                     counter++; // Increase record counter...
+
                     // Thread.sleep(500); // use if you want to add latency between record sends
-                    // Thread.sleep(new Random(1000).nextLong()); // use if you want to add random latency between record sends
-                } while (counter < 10); // Number of records sent in a batch...
+
+                    // use if you want to add random latency between record sends
+                    // Thread.sleep(new Random(1000).nextLong());
+                    } while (counter < 10); // Number of records sent in a batch...
                 counter = 0; // Reset the record counter...
+
                 Thread.sleep(500); // Set how long before a new batch is sent...
+
                 // Thread.sleep(new Random(5000).nextLong()); // use if you want to randomize the time between batch record sends
+
                 batchNumber++; // Increase the batch number...
             }
 
