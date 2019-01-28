@@ -8,7 +8,7 @@ import java.util.Properties;
 
 public class _001_ProducerSimple {
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
 
         // Check arguments length value
        /*
@@ -45,9 +45,9 @@ public class _001_ProducerSimple {
         props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
 
-        Producer<String, String> producer = new KafkaProducer <String, String>(props);
+        Producer<String, String> producer = new KafkaProducer<String, String>(props);
 
-        for(int i = 0; i < 10; i++)
+        for (int i = 0; i < 10; i++)
             producer.send(new ProducerRecord<String, String>(topicName, Integer.toString(i), Integer.toString(i)));
         System.out.println("Message sent successfully");
         producer.close();

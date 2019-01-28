@@ -1,10 +1,11 @@
 package com.mimaraslan.kafka;
 
 import java.util.Properties;
-        import java.util.Arrays;
-        import org.apache.kafka.clients.consumer.KafkaConsumer;
-        import org.apache.kafka.clients.consumer.ConsumerRecords;
-        import org.apache.kafka.clients.consumer.ConsumerRecord;
+import java.util.Arrays;
+
+import org.apache.kafka.clients.consumer.KafkaConsumer;
+import org.apache.kafka.clients.consumer.ConsumerRecords;
+import org.apache.kafka.clients.consumer.ConsumerRecord;
 
 public class _002_ConsumerSimple {
 
@@ -22,7 +23,6 @@ public class _002_ConsumerSimple {
         String topicName = "my-topic";// args[0].toString();
 
         Properties props = new Properties();
-
         props.put("bootstrap.servers", "localhost:9092");
         props.put("group.id", "test");
         props.put("enable.auto.commit", "true");
@@ -30,7 +30,8 @@ public class _002_ConsumerSimple {
         props.put("session.timeout.ms", "30000");
         props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
-        KafkaConsumer<String, String> consumer = new KafkaConsumer <String, String>(props);
+
+        KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(props);
 
         //Kafka Consumer subscribes list of topics here.
         consumer.subscribe(Arrays.asList(topicName));

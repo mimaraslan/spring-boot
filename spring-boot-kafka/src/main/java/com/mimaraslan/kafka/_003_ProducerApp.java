@@ -10,6 +10,7 @@ import java.util.*;
 public class _003_ProducerApp {
 
     public static void main(String[] args){
+
         // Create the Properties class to instantiate the Consumer with the desired settings:
         Properties props = new Properties();
         props.put("bootstrap.servers", "localhost:9092, localhost:9093");

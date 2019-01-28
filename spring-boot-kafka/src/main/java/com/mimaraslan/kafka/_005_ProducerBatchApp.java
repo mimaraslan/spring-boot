@@ -44,16 +44,20 @@ public class _005_ProducerBatchApp {
                     );
                     counter++; // Increase record counter...
 
-                    // Thread.sleep(500); // use if you want to add latency between record sends
+                    // use if you want to add latency between record sends
+                    // Thread.sleep(500);
 
                     // use if you want to add random latency between record sends
                     // Thread.sleep(new Random(1000).nextLong());
+
                     } while (counter < 10); // Number of records sent in a batch...
                 counter = 0; // Reset the record counter...
 
-                Thread.sleep(500); // Set how long before a new batch is sent...
+                // Set how long before a new batch is sent...
+                Thread.sleep(500);
 
-                // Thread.sleep(new Random(5000).nextLong()); // use if you want to randomize the time between batch record sends
+                // use if you want to randomize the time between batch record sends
+                // Thread.sleep(new Random(5000).nextLong());
 
                 batchNumber++; // Increase the batch number...
             }
