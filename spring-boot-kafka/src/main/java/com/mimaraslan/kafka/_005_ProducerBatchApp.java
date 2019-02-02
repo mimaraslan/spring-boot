@@ -8,7 +8,7 @@ import java.util.*;
 
 public class _005_ProducerBatchApp {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         // Create the Properties class to instantiate the Consumer with the desired settings:
         Properties props = new Properties();
@@ -50,7 +50,7 @@ public class _005_ProducerBatchApp {
                     // use if you want to add random latency between record sends
                     // Thread.sleep(new Random(1000).nextLong());
 
-                    } while (counter < 10); // Number of records sent in a batch...
+                } while (counter < 10); // Number of records sent in a batch...
                 counter = 0; // Reset the record counter...
 
                 // Set how long before a new batch is sent...

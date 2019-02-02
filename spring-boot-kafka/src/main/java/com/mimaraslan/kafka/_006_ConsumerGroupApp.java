@@ -8,7 +8,7 @@ import java.util.*;
 
 public class _006_ConsumerGroupApp {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         // Create the Properties class to instantiate the Consumer with the desired settings:
         Properties props = new Properties();
@@ -51,7 +51,7 @@ public class _006_ConsumerGroupApp {
 
         // Start polling for messages:
         try {
-            while (true){
+            while (true) {
                 ConsumerRecords records = myConsumer.poll(1000);
                 printRecords(records);
             }
@@ -60,20 +60,18 @@ public class _006_ConsumerGroupApp {
         }
     }
 
-    private static void printSet(Set<String> collection){
+    private static void printSet(Set<String> collection) {
         if (collection.isEmpty()) {
             System.out.println("I am not subscribed to anything yet...");
-        }
-        else {
+        } else {
             System.out.println("I am subscribed to the following topics:");
-            for (String item : collection){
+            for (String item : collection) {
                 System.out.println(item);
             }
         }
     }
 
-    private static void printRecords(ConsumerRecords<String, String> records)
-    {
+    private static void printRecords(ConsumerRecords<String, String> records) {
         for (ConsumerRecord<String, String> record : records) {
             System.out.println(String.format("Topic: %s, Partition: %d, Offset: %d, Key: %s, Value: %s", record.topic(), record.partition(), record.offset(), record.key(), record.value()));
         }

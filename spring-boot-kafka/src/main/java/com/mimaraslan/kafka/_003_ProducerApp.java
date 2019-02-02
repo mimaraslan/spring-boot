@@ -9,7 +9,7 @@ import java.util.*;
 
 public class _003_ProducerApp {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         // Create the Properties class to instantiate the Consumer with the desired settings:
         Properties props = new Properties();
@@ -31,7 +31,7 @@ public class _003_ProducerApp {
         props.put("max.in.flight.requests.per.connection", 5);
         props.put("retry.backoff.ms", 5);
 
-        Producer<String, String> myProducer = new KafkaProducer <String, String>(props);
+        Producer<String, String> myProducer = new KafkaProducer<String, String>(props);
 
         DateFormat dtFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss:SSS");
         String topicName = "my-topic";
@@ -40,13 +40,13 @@ public class _003_ProducerApp {
         long sleepTimer = 1000; // how long you want to wait before the next record to be sent
 
         try {
-            for (int i = 0; i < numberOfRecords; i++){
+            for (int i = 0; i < numberOfRecords; i++) {
                 myProducer.send(new ProducerRecord<String, String>(topicName, String.format("Message: %s  sent at %s", Integer.toString(i), dtFormat.format(new Date()))));
 
-            Thread.sleep(sleepTimer);
+                Thread.sleep(sleepTimer);
                 // use if you want to randomize the time between record sends
                 // Thread.sleep(new Random(5000).nextLong());
-                 }
+            }
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
