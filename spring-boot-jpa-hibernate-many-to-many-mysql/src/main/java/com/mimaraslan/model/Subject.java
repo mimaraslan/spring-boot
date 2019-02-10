@@ -31,7 +31,6 @@ public class Subject {
     	this.students = students;
     }
 	
-	// name
 	public String getName() {
 		return name;
 	}
@@ -39,7 +38,6 @@ public class Subject {
 		this.name = name;
 	}
 	
-	// students
 	public Set<Student> getStudents() {
 		return students;
 	}

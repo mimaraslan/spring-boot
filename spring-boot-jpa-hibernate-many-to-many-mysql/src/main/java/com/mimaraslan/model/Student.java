@@ -33,7 +33,6 @@ public class Student {
 		this.subjects = subjects;
 	}
 	
-	// name
 	public String getName() {
 		return name;
 	}
@@ -41,7 +40,6 @@ public class Student {
 		this.name = name;
 	}
 	
-	// subjects
 	public Set<Subject> getSubjects() {
 		return subjects;
 	}
