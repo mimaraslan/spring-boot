@@ -4,6 +4,7 @@
 *.war
 *.ear
 .mtj.tmp/
+.mvn/wrapper
 hs_err_pid*
 
 ### Package Files ###
