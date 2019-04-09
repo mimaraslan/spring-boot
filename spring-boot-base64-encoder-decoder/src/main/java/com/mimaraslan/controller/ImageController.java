@@ -43,8 +43,7 @@ public class ImageController {
 	public ResponseEntity<Object> getImage() {
 		return new ResponseEntity<>(imageRepository.values(), HttpStatus.OK);
 	}
-	
-	
+
 	// STEP 2 - VERSION 1
 	// http://localhost:8080/decoder
 	@PostMapping("/decoder")
@@ -58,7 +57,6 @@ public class ImageController {
 		UtilBase64Image.decoder(image.getBase64ImageStringData(), path);
 		return "Post Successful!";
 	}
-	
 
 	// STEP 2 - VERSION 2
 	// http://localhost:8080//v2/decoder
@@ -81,51 +79,48 @@ public class ImageController {
 		}
 		return result;
 	}
-	
-	
+
 	// STEP 3 - VERSION 1
-		// http://localhost:8080/encoder?name=demoImage.jpg
-		@GetMapping(value = "/encoder")
-		public Image get(@RequestParam("name") String name) {
-			System.out.println(String.format("GET info: imageName = %s", name));
-			// String imagePath = "C:\\server\\" + name;
-			String imagePath = System.getProperty("user.dir") + "\\" + name;
+	// http://localhost:8080/encoder?name=demoImage.jpg
+	@GetMapping(value = "/encoder")
+	public Image get(@RequestParam("name") String name) {
+		System.out.println(String.format("GET info: imageName = %s", name));
+		// String imagePath = "C:\\server\\" + name;
+		String imagePath = System.getProperty("user.dir") + "\\" + name;
 
-			String imageBase64 = UtilBase64Image.encoder(imagePath);
+		String imageBase64 = UtilBase64Image.encoder(imagePath);
 
+		if (imageBase64 != null) {
+			// Image image = new Image(name, imageBase64);
+			Image image = new Image(name, imagePath, imageBase64);
+			return image;
+		}
+		return null;
+	}
+
+	// STEP 3 - VERSION 2
+	// http://localhost:8080/v2/encoder?name=demoImage.jpg
+	@RequestMapping(value = "/v2/encoder", method = RequestMethod.GET)
+	public Image encoder(String name) {
+		String imagePath = System.getProperty("user.dir") + "\\" + name;
+		File file = new File(imagePath);
+		try (FileInputStream imageInFile = new FileInputStream(file)) {
+			// Reading a Image file from file system
+			byte imageData[] = new byte[(int) file.length()];
+			imageInFile.read(imageData);
+			String imageBase64 = Base64.getEncoder().encodeToString(imageData);
 			if (imageBase64 != null) {
-				//	Image image = new Image(name, imageBase64);
 				Image image = new Image(name, imagePath, imageBase64);
 				return image;
 			}
-			return null;
+		} catch (FileNotFoundException e) {
+			System.out.println("Image not found" + e);
+		} catch (IOException ioe) {
+			System.out.println("Exception while reading the Image " + ioe);
 		}
+		return null;
+	}
 
-		// STEP 3 - VERSION 2
-		// http://localhost:8080/v2/encoder?name=demoImage.jpg
-		@RequestMapping(value = "/v2/encoder", method = RequestMethod.GET)
-		public Image encoder(String name) {
-			String imagePath = System.getProperty("user.dir") + "\\" + name;
-			File file = new File(imagePath);
-			try (FileInputStream imageInFile = new FileInputStream(file)) {
-				// Reading a Image file from file system
-				byte imageData[] = new byte[(int) file.length()];
-				imageInFile.read(imageData);
-				String imageBase64 = Base64.getEncoder().encodeToString(imageData);
-				if (imageBase64 != null) {
-					Image image = new Image(name, imagePath, imageBase64);
-					return image;
-				}
-			} catch (FileNotFoundException e) {
-				System.out.println("Image not found" + e);
-			} catch (IOException ioe) {
-				System.out.println("Exception while reading the Image " + ioe);
-			}
-			return null;
-		}
-
-	
-	
 	@RequestMapping(value = "/images/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<Object> delete(@PathVariable("id") Integer id) {
 		imageRepository.remove(id);
@@ -147,6 +142,5 @@ public class ImageController {
 		imageRepository.put(image.getId(), image);
 		return new ResponseEntity<>("Image is created successfully", HttpStatus.CREATED);
 	}
-
 
 }

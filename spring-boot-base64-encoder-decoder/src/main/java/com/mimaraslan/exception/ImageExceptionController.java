@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @ControllerAdvice
 public class ImageExceptionController {
-   @ExceptionHandler(value = ImageNotfoundException.class)
-   public ResponseEntity<Object> exception(ImageNotfoundException exception) {
-      return new ResponseEntity<>("Image not found", HttpStatus.NOT_FOUND);
-   }
+	@ExceptionHandler(value = ImageNotfoundException.class)
+	public ResponseEntity<Object> exception(ImageNotfoundException exception) {
+		return new ResponseEntity<>("Image not found", HttpStatus.NOT_FOUND);
+	}
 }
