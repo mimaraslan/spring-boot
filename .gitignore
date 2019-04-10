@@ -36,3 +36,5 @@ spring-boot-redis/.mvn/wrapper/maven-wrapper.properties
 spring-boot-https-ssl-certificate/.mvn/wrapper/maven-wrapper.jar
 spring-boot-redis/bin/.mvn/wrapper/maven-wrapper.jar
 spring-boot-redis/bin/.mvn/wrapper/maven-wrapper.properties
+*.jar
+*.jar
