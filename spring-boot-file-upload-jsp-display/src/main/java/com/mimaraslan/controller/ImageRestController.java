@@ -60,12 +60,11 @@ public class ImageRestController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
- 
         }
- 
         return new ResponseEntity<Object>("All file Uplaoded succesfully", HttpStatus.OK);
     }
-  
+ 
+    
     //method for downloading file
     @RequestMapping(value = "/download/file/{fileName:.+}", method = RequestMethod.GET, produces = MediaType.APPLICATION_OCTET_STREAM_VALUE)
     public ResponseEntity<Object> downloadFile(@PathVariable String fileName, HttpServletResponse response) {
@@ -90,13 +89,9 @@ public class ImageRestController {
         }
     }
     
+   
     
-    
-    
-    
-    
-    
-    //method for uploading single file
+    //method for uploading single file and downloading file
     @RequestMapping(value = "/upload/download/file", 
 		    		method = RequestMethod.POST, 
 		    		consumes = MediaType.MULTIPART_FORM_DATA_VALUE, 
@@ -105,6 +100,7 @@ public class ImageRestController {
  
         File uploadedFile = new File(baseFolderPath, fileName.getOriginalFilename());
  
+        //uploading single file
         try {
             uploadedFile.createNewFile();
             FileOutputStream fileOutputStream = new FileOutputStream(uploadedFile);
@@ -113,10 +109,8 @@ public class ImageRestController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        
-        
-        
-        
+       
+        //downloading single file
         String filePath = baseFolderPath + fileName.getOriginalFilename();
         Path path = Paths.get(filePath);
         Resource resource = null;
@@ -131,20 +125,11 @@ public class ImageRestController {
             return ResponseEntity.ok()
                     .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + resource.getFilename() + "\"")
                     .body(resource);
+            // return new ResponseEntity<Object>("File Uplaoded succesfully", HttpStatus.OK);
             // return new ResponseEntity<Object>(resource, HttpStatus.OK);
         } else {
             return new ResponseEntity<Object>("File Not Found ", HttpStatus.OK);
         }
-        
-        // return new ResponseEntity<Object>("File Uplaoded succesfully", HttpStatus.OK);
-
-        
     }
     
-    
-    
-    
-    
-    
- 
 }
