@@ -5,7 +5,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import com.mimaraslan.service.UserService;
+
+import com.mimaraslan.service.MessageProcessor;
 
 @SpringBootApplication
 public class MainApplication {
@@ -15,7 +16,8 @@ public class MainApplication {
 	public static void main(String[] args) {
 		LOG.info("STARTING THE APPLICATION");
 		ApplicationContext applicationContext = SpringApplication.run(MainApplication.class, args);
-		UserService userService = applicationContext.getBean(UserService.class);
+		
+		MessageProcessor userService = applicationContext.getBean(MessageProcessor.class);
 		userService.processMsg("Message sending ");
 		LOG.info("APPLICATION FINISHED");
 	}

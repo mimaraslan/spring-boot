@@ -5,17 +5,17 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserServiceImpl implements UserService {
+public class MessageProcessorImpl implements MessageProcessor {
 
 	@Autowired
 	@Qualifier("aService")
-	private MessageService messageService;
+	private SelectService myService;
 
-	public void setMessageService(MessageService messageService) {
-		this.messageService = messageService;
+	public void setMyService(SelectService myService) {
+		this.myService = myService;
 	}
 
 	public void processMsg(String message) {
-		messageService.sendMsg(message);
+		myService.sendMsg(message);
 	}
 }

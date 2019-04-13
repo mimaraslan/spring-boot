@@ -1,5 +1,5 @@
 package com.mimaraslan.service;
 
-public interface MessageService {
+public interface SelectService {
 	public void sendMsg(String message);
 }

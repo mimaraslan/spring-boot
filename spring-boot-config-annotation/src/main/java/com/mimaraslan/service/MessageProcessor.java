@@ -1,4 +1,4 @@
-package net.guides.springboot2.springboot2javaconfig.service;
+package com.mimaraslan.service;
 
 public interface MessageProcessor {
 	public void processMsg(String message);
