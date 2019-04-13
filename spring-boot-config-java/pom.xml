@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.mimaraslan</groupId>
-	<artifactId>spring-boot-java-config</artifactId>
+	<artifactId>spring-boot-config-java</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-java-config</name>
+	<name>spring-boot-config-java</name>
 	<description>Java Config demo project for Spring Boot</description>
 
 	<properties>
