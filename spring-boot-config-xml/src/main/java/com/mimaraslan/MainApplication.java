@@ -8,14 +8,13 @@ import com.mimaraslan.service.MessageProcessor;
 
 @SpringBootApplication
 @ImportResource({"classpath*:applicationContext.xml"})
-public class SpringBootXmlConfigApplication {
+public class MainApplication {
 
 	public static void main(String[] args) {
-		//SpringApplication.run(SpringBootXmlConfigApplication.class, args);
-		ApplicationContext applicationContext = SpringApplication.run(SpringBootXmlConfigApplication.class, args);
+		ApplicationContext applicationContext = SpringApplication.run(MainApplication.class, args);
 
 		MessageProcessor userService = applicationContext.getBean(MessageProcessor.class);
-		userService.processMsg("A message sending ");
+		userService.processMsg("Message sending ");
 	}
 
 }
