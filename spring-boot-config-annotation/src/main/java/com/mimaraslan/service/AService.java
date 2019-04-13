@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 public class AService implements SelectService{
 
 	public void sendMsg(String message) {
-		System.out.println(message);
+		System.out.println("Service A : " + message);
 	}
 
 }

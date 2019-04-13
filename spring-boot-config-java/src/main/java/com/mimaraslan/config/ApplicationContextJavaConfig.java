@@ -29,7 +29,7 @@ public class ApplicationContextJavaConfig {
 
 	@Bean
 	public MessageProcessor messageProcessor() {
-		return new MessageProcessorImpl(bService());
+		return new MessageProcessorImpl(aService());
 	}
 	
 }
