@@ -12,7 +12,6 @@ public class MainApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = SpringApplication.run(MainApplication.class, args);
-
 		MessageProcessor userService = applicationContext.getBean(MessageProcessor.class);
 		userService.processMsg("Message sending ");
 	}
