@@ -7,7 +7,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<!-- <context:component-scan base-package="com.in28minutes.spring.basics"/> -->
+    <context:component-scan base-package="com.mimaraslan"/> 
 
 	<bean id="aService" class="com.mimaraslan.service.AService" />
 	<bean id="bService" class="com.mimaraslan.service.BService" />
