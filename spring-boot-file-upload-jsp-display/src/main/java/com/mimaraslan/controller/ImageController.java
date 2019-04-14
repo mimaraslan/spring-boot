@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Base64;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -17,7 +16,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 public class ImageController {
 
-	private static String baseFolderPath = System.getProperty("user.dir")+"/src/main/resources/static/";
+	private static String baseFolderPath = System.getProperty("user.dir") + "/src/main/resources/static/";
 
 	@Value("${index.message:test}")
 	private String message = "Image Upload";

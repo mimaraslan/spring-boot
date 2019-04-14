@@ -89,8 +89,7 @@ public class ImageRestController {
         }
     }
     
-   
-    
+       
     //method for uploading single file and downloading file
     @RequestMapping(value = "/upload/download/file", 
 		    		method = RequestMethod.POST, 
@@ -123,10 +122,8 @@ public class ImageRestController {
  
         if (resource.exists()) {
             return ResponseEntity.ok()
-                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + resource.getFilename() + "\"")
-                    .body(resource);
-            // return new ResponseEntity<Object>("File Uplaoded succesfully", HttpStatus.OK);
-            // return new ResponseEntity<Object>(resource, HttpStatus.OK);
+              .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + resource.getFilename() + "\"")
+              .body(resource);
         } else {
             return new ResponseEntity<Object>("File Not Found ", HttpStatus.OK);
         }
