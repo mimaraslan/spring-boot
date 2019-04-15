@@ -16,10 +16,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 public class ImageController {
 
-	private static String baseFolderPath = System.getProperty("user.dir")+"/src/main/resources/static/";
+	private static String baseFolderPath = System.getProperty("user.dir") + "/src/main/resources/static/";
 
-	@Value("${welcome.message:test}")
-	private String message = "Hello World";
+	@Value("${index.message:test}")
+	private String message = "Image Upload";
 
 	@GetMapping("/")
 	public String viewIndex(Map<String, Object> model) {
@@ -28,39 +28,33 @@ public class ImageController {
 	}
 
     @GetMapping("/upload")
-    public String index() {
+    public String viewUpload() {
         return "upload";
     }
 
     @PostMapping("/upload") 
-    public String singleFileUpload(@RequestParam("file") MultipartFile file,
+    public String viewFileUpload(@RequestParam("fileName") MultipartFile fileName,
                                    RedirectAttributes redirectAttributes) {
 
-        if (file.isEmpty()) {
+        if (fileName.isEmpty()) {
             redirectAttributes.addFlashAttribute("message", "Please select a file to upload");
-            return "redirect:uploadStatus";
+            return "redirect:upload";
         }
 
         try {
-            byte[] bytes = file.getBytes();
-            Path path = Paths.get(baseFolderPath + file.getOriginalFilename());
-            Files.write(path, bytes);
-
-            redirectAttributes.addFlashAttribute("message",
-                    "You successfully uploaded '" + file.getOriginalFilename() + "'");
+            byte[] fileBytes = fileName.getBytes();
             
-            redirectAttributes.addFlashAttribute("imageName",file.getOriginalFilename());           
+            Path filePath = Paths.get(baseFolderPath + fileName.getOriginalFilename());
+            Files.write(filePath, fileBytes);
+            
+			redirectAttributes.addFlashAttribute("message", "You successfully uploaded");
+			redirectAttributes.addFlashAttribute("imageName", fileName.getOriginalFilename());
 
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        return "redirect:/uploadStatus";
-    }
-
-    @GetMapping("/uploadStatus")
-    public String uploadStatus() {
-        return "uploadStatus";
+        return "redirect:/upload";
     }
 
 }
