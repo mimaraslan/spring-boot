@@ -9,9 +9,9 @@
 		<relativePath/> 
 	</parent>
 	<groupId>com.mimaraslan</groupId>
-	<artifactId>spring-boot-jsp-jpa-hibernate-mysql-swagger</artifactId>
+	<artifactId>spring-boot-jpa-swagger</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-jsp-jpa-hibernate-mysql-swagger</name>
+	<name>spring-boot-jpa-swagger</name>
 	<description>Swagger web application demo project for Spring Boot</description>
 
 	<properties>
