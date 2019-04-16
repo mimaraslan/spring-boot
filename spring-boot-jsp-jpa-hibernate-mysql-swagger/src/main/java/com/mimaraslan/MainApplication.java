@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootJspJpaMysqlSwaggerApplication {
+public class MainApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootJspJpaMysqlSwaggerApplication.class, args);
+		SpringApplication.run(MainApplication.class, args);
 	}
 
 }
