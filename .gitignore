@@ -33,3 +33,14 @@ spring-boot-crud-rest/.mvn/wrapper/maven-wrapper.jar
 spring-boot-crud-rest/.mvn/wrapper/maven-wrapper.properties
 spring-boot-crud-rest/.mvn/wrapper/MavenWrapperDownloader.java
 spring-boot-crud-rest/mvnw.cmd
+/.metadata/
+spring-boot-jsp-bootstrap-jpa-mysql/.mvn/wrapper/maven-wrapper.jar
+spring-boot-jsp-bootstrap-jpa-mysql/.mvn/wrapper/maven-wrapper.properties
+spring-boot-jsp-bootstrap-jpa-mysql/.mvn/wrapper/MavenWrapperDownloader.java
+spring-boot-jsp-bootstrap-jpa-mysql/mvnw
+spring-boot-jsp-bootstrap-jpa-mysql/mvnw.cmd
+.metadata/version.ini
+.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat
+.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.egit.core.prefs
+.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources
+.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index

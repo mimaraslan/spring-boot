@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.mimaraslan</groupId>
-	<artifactId>spring-boot-jsp-bootstrap-data-jpa-hibernate-mysql</artifactId>
+	<artifactId>spring-boot-jsp-bootstrap-jpa-mysql</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-jsp-bootstrap-data-jpa-hibernate-mysql</name>
+	<name>spring-boot-jsp-bootstrap-jpa-mysql</name>
 	<description>JSP, Bootstrap, Data JPA, Hibernate, MySQL web application demo project for Spring Boot</description>
 
 	<properties>
