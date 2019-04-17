@@ -27,3 +27,4 @@ spring-boot-xml-config/.classpath
 spring-boot-xml-config/target/*
 spring-boot-logging/target/classes/META-INF/maven/com.mimaraslan/spring-boot-logging/pom.xml
 spring-boot-logging/.*
+spring-boot-logging/target/classes/META-INF/maven/com.mimaraslan/spring-boot-logging/pom.properties
