@@ -28,3 +28,8 @@ spring-boot-xml-config/target/*
 spring-boot-logging/target/classes/META-INF/maven/com.mimaraslan/spring-boot-logging/pom.xml
 spring-boot-logging/.*
 spring-boot-logging/target/classes/META-INF/maven/com.mimaraslan/spring-boot-logging/pom.properties
+spring-boot-crud-rest/.mvn/wrapper/maven-wrapper.jar
+spring-boot-crud-rest/.mvn/wrapper/maven-wrapper.jar
+spring-boot-crud-rest/.mvn/wrapper/maven-wrapper.properties
+spring-boot-crud-rest/.mvn/wrapper/MavenWrapperDownloader.java
+spring-boot-crud-rest/mvnw.cmd
