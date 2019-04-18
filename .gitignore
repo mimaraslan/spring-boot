@@ -44,3 +44,10 @@ spring-boot-jsp-bootstrap-jpa-mysql/mvnw.cmd
 .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.egit.core.prefs
 .metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources
 .metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index
+.metadata/.plugins/org.eclipse.core.runtime/.settings/org.springframework.ide.eclipse.boot.dash:Cloud Foundry.prefs
+spring-boot-lombok/mvnw.cmd
+spring-boot-lombok/mvnw
+spring-boot-lombok/.mvn/wrapper/MavenWrapperDownloader.java
+spring-boot-lombok/.mvn/wrapper/maven-wrapper.properties
+spring-boot-lombok/.mvn/wrapper/maven-wrapper.jar
+.metadata/.plugins/org.eclipse.core.runtime/.settings/org.springframework.ide.eclipse.boot.dash:Cloud Foundry.prefs
