@@ -1,7 +1,5 @@
 package com.mimaraslan.model;
 
-import lombok.Builder;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
@@ -14,11 +12,9 @@ import lombok.ToString;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @ToString
-@EqualsAndHashCode
-@Builder
 public class Employee {	
-	private  @NonNull long id;
+	private  @NonNull Long id;
 	private  @NonNull String firstName;
 	private  @NonNull String lastName;
-	private  @NonNull String emailId;
+	private  @NonNull String email;
 }

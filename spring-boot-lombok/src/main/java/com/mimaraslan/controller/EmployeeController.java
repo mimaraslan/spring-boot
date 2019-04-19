@@ -7,20 +7,18 @@ import com.mimaraslan.model.Employee;
 
 @Controller
 public class EmployeeController {
-
-	@GetMapping("/")
-	public String viewEmployee(Map<String, Object> model) {
+	
+	@GetMapping({"/", "/index"})
+	public String viewIndex(Map<String, Object> model) {	
 		
-//		Employee employee = new EmployeeBuilder()
-//                .name("Mimar Aslan")
-//                .address("Turkey")
-//                .age("38")
-//                .build();
-//
-//System.out.println(lombokModel);  
-//		model.put("message", this.message);
+		Employee employee = new Employee();
+		employee.setId(1L);
+		employee.setFirstName("Mimar");
+		employee.setLastName("Aslan");
+		employee.setEmail("mimar.aslan@gmail.com");
+	
+		model.put("message", employee);
 		return "index";
 	}
-	
 
 }
