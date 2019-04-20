@@ -39,4 +39,11 @@
 		<item value="org.sonatype.m2e.egit.feature:0.15.1.201806191431"/>
 		<item value="org.sonatype.m2e.mavenarchiver.feature:0.17.2.201606141937-signed-20160830073346"/>
 	</list>
+	<section name="TaskPropertiesDialogSettings">
+		<item value="702" key="DIALOG_WIDTH"/>
+		<item value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont" key="DIALOG_FONT_NAME"/>
+		<item value="250" key="DIALOG_HEIGHT"/>
+		<item value="351" key="DIALOG_X_ORIGIN"/>
+		<item value="272" key="DIALOG_Y_ORIGIN"/>
+	</section>
 </section>

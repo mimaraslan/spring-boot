@@ -7,7 +7,6 @@ public class Image {
 	private String base64ImageStringData;
 
 	public Image() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Image(String name, String base64ImageStringData) {
