@@ -61,7 +61,6 @@ nb-configuration.xml
 ### VS Code ###
 .vscode/
 
-
 ### BlueJ files ### 
 *.ctxt
 
