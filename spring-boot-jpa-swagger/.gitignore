@@ -19,6 +19,7 @@ pom.xml.releaseBackup
 pom.xml.versionsBackup
 pom.xml.next
 release.properties
+.mvn/*
 
 ### Eclipse ###
 .metadata
@@ -39,6 +40,7 @@ local.properties
 .factorypath
 .springBeans
 .sts4-cache
+mvnw.*
 
 ### IntelliJ ###
 .idea/
