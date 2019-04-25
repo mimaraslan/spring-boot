@@ -1,6 +1,4 @@
-##########################
-## Java
-##########################
+### Java ###
 *.class
 .mtj.tmp/
 *.jar
@@ -8,17 +6,13 @@
 *.ear
 hs_err_pid*
 
-##########################
-## Package Files 
-##########################
+### Package Files ###
 *.nar
 *.zip
 *.tar.gz
 *.rar
 
-##########################
-## Maven
-##########################
+### Maven ###
 target/
 pom.xml.tag
 pom.xml.releaseBackup
@@ -26,9 +20,7 @@ pom.xml.versionsBackup
 pom.xml.next
 release.properties
 
-##########################
-## Eclipse
-##########################
+### Eclipse ###
 .metadata
 .classpath
 .project
@@ -42,19 +34,21 @@ tmp/
 local.properties
 .loadpath
 
-##########################
-## IntelliJ
-##########################
-*.iml
+### STS ###
+.apt_generated
+.factorypath
+.springBeans
+.sts4-cache
+
+### IntelliJ ###
 .idea/
+*.iml
 *.ipr
 *.iws
 out/
 .idea_modules/
 
-##########################
-## NetBeans
-##########################
+### NetBeans ###
 nbproject/private/
 build/
 nbbuild/
@@ -62,18 +56,18 @@ dist/
 nbdist/
 nbactions.xml
 nb-configuration.xml
+.nb-gradle/
 
-##########################
-## BlueJ files
-##########################
+### VS Code ###
+.vscode/
+
+
+### BlueJ files ### 
 *.ctxt
 
-##########################
-## Log file
-##########################
+### Log file ### 
 *.log
 
-##########################
-## OS X
-##########################
+### OS X ### 
 .DS_Store
+
