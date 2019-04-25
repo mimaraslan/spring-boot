@@ -1,9 +1,9 @@
 ### Java ###
 *.class
-.mtj.tmp/
 *.jar
 *.war
 *.ear
+.mtj.tmp/
 hs_err_pid*
 
 ### Package Files ###
@@ -40,7 +40,7 @@ local.properties
 .springBeans
 .sts4-cache
 
-## IntelliJ
+### IntelliJ ###
 .idea/
 *.iml
 *.ipr
@@ -61,7 +61,6 @@ nb-configuration.xml
 ### VS Code ###
 .vscode/
 
-
 ### BlueJ files ### 
 *.ctxt
 
@@ -70,4 +69,3 @@ nb-configuration.xml
 
 ### OS X ### 
 .DS_Store
-
