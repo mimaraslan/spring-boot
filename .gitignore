@@ -1,9 +1,9 @@
 ### Java ###
 *.class
-.mtj.tmp/
 *.jar
 *.war
 *.ear
+.mtj.tmp/
 hs_err_pid*
 
 ### Package Files ###
@@ -70,4 +70,3 @@ nb-configuration.xml
 
 ### OS X ### 
 .DS_Store
-
