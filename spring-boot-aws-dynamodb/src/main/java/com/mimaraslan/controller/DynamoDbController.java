@@ -41,11 +41,13 @@ public class DynamoDbController {
 	}
 
 	@DeleteMapping(value = "/{studentId}/{lastName}")
-	public void deleteStudentDetails(@PathVariable("studentId") String studentId,
+	public String deleteStudentDetails(@PathVariable("studentId") String studentId,
 			@PathVariable("lastName") String lastName) {
 		Student student = new Student();
 		student.setStudentId(studentId);
 		student.setLastName(lastName);
 		repository.deleteStudentDetails(student);
+		return "Successfully deleted from DynamoDB table";
+
 	}
 }

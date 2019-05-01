@@ -10,21 +10,13 @@ public class Address implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	@DynamoDBAttribute
 	private String addressLine1;
-
-	@DynamoDBAttribute
 	private String addressLine2;
-
-	@DynamoDBAttribute
 	private String state;
-
-	@DynamoDBAttribute
 	private String city;
-
-	@DynamoDBAttribute
 	private String zipCode;
 
+	@DynamoDBAttribute
 	public String getAddressLine1() {
 		return addressLine1;
 	}
@@ -33,6 +25,7 @@ public class Address implements Serializable {
 		this.addressLine1 = addressLine1;
 	}
 
+	@DynamoDBAttribute
 	public String getAddressLine2() {
 		return addressLine2;
 	}
@@ -41,6 +34,7 @@ public class Address implements Serializable {
 		this.addressLine2 = addressLine2;
 	}
 
+	@DynamoDBAttribute
 	public String getState() {
 		return state;
 	}
@@ -49,6 +43,7 @@ public class Address implements Serializable {
 		this.state = state;
 	}
 
+	@DynamoDBAttribute
 	public String getCity() {
 		return city;
 	}
@@ -57,6 +52,7 @@ public class Address implements Serializable {
 		this.city = city;
 	}
 
+	@DynamoDBAttribute
 	public String getZipCode() {
 		return zipCode;
 	}
