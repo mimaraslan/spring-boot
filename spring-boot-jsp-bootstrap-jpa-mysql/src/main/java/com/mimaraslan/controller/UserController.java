@@ -1,4 +1,4 @@
-package com.mimaraslan.controllers;
+package com.mimaraslan.controller;
 
 import java.util.Map;
 
@@ -6,9 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.beans.factory.annotation.Value;
 
-import com.mimaraslan.repositories.UserRepository;
+import com.mimaraslan.repository.UserRepository;
+
+import org.springframework.beans.factory.annotation.Value;
 
 @Controller
 public class UserController {

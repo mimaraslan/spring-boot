@@ -1,4 +1,4 @@
-package com.mimaraslan.controllers;
+package com.mimaraslan.controller;
 
 import java.util.HashMap;
 import java.util.List;
@@ -20,8 +20,8 @@ import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import com.mimaraslan.exceptions.ResourceNotFoundException;
-import com.mimaraslan.models.Employee;
-import com.mimaraslan.repositories.EmployeeRepository;
+import com.mimaraslan.model.Employee;
+import com.mimaraslan.repository.EmployeeRepository;
 
 @RestController
 @RequestMapping("/api/v1")

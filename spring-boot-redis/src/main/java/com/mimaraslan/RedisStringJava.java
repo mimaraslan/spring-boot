@@ -1,4 +1,4 @@
-package com.mimaraslan.bootdemo;
+package com.mimaraslan;
 import redis.clients.jedis.Jedis; 
 
 public class RedisStringJava { 

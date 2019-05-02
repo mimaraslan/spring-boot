@@ -1,4 +1,4 @@
-package com.mimaraslan.models;
+package com.mimaraslan.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
