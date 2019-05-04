@@ -1,10 +1,10 @@
 amazon:
   access:
-    key: <YOUR KEY>
-    secret-key: <YOUR SECRET KEY>
-  region: us-east-1
+    key: <YOUR ACCESS KEY>
+    secret-key: <YOUR ACCESS SECRET KEY>
+  region: <YOUR REGION>
   end-point:
-    url: dynamodb.us-east-1.amazonaws.com
+    url: dynamodb.<YOUR REGION>.amazonaws.com
     
 server:
-  port: 8085
+  port: 8085        
