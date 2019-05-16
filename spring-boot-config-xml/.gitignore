@@ -40,6 +40,9 @@ local.properties
 .factorypath
 .springBeans
 .sts4-cache
+.classpath
+.project
+.settings
 mvnw.*
 
 ### IntelliJ ###
