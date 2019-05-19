@@ -1,4 +1,4 @@
-# vue-springboot
+# client-vuejs
 
 ## Project setup
 ```
