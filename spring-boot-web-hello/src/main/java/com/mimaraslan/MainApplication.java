@@ -14,8 +14,8 @@ public class MainApplication {
 	}
 
 	@RequestMapping(value = "/")
-	public String name() {
-		return "Hello world";
+	public String greeting() {
+		return "Hello Spring Boot";
 	}
 
 }
