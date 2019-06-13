@@ -31,5 +31,4 @@ public class ApplicationContextJavaConfig {
 	public MessageProcessor messageProcessor() {
 		return new MessageProcessorImpl(aService());
 	}
-	
 }

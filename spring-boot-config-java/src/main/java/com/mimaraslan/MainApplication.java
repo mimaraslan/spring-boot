@@ -16,8 +16,8 @@ public class MainApplication {
 		LOG.info("STARTING THE APPLICATION");
 		ApplicationContext applicationContext = SpringApplication.run(MainApplication.class, args);
 		
-		MessageProcessor userService = applicationContext.getBean(MessageProcessor.class);
-		userService.processMsg("Message sending ");
+		MessageProcessor messageProcessor = applicationContext.getBean(MessageProcessor.class);
+		messageProcessor.processMsg("Message sending ");
 		LOG.info("APPLICATION FINISHED");
 
 	}

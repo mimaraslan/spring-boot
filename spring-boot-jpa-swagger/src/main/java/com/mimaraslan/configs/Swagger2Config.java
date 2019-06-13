@@ -21,13 +21,14 @@ public class Swagger2Config {
 				.apis(RequestHandlerSelectors
 				.basePackage("com.mimaraslan.controllers"))
 				.paths(PathSelectors.regex("/.*"))
-				.build().apiInfo(apiEndPointsInfo());
+				.build()
+				.apiInfo(apiEndPointsInfo());
 	}
 
 	private ApiInfo apiEndPointsInfo() {
 		return new ApiInfoBuilder().title("Spring Boot REST API")
 				.description("Senior Java Developer, Computer Engineer")
-				.contact(new Contact("Mimar Aslan", "http://www.mimaraslan.com", "mimaraslan@gmail.com"))
+				.contact(new Contact("Mimar Aslan", "http://www.mimaraslan.com", "mimar.aslan@gmail.com"))
 				.license("Apache 2.0")
 				.licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
 				.version("1.0.0")

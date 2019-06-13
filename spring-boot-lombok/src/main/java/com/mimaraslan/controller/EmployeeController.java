@@ -20,5 +20,4 @@ public class EmployeeController {
 		model.put("message", employee);
 		return "index";
 	}
-
 }
