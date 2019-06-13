@@ -1,10 +1,10 @@
-package com.mimaraslan.modelmapper;
+package com.mimaraslan.javabeans.datatransferobject;
 
 import org.modelmapper.ModelMapper;
 import org.modelmapper.PropertyMap;
 
-import com.mimaraslan.modelmapper.dto.UserDTO;
-import com.mimaraslan.modelmapper.model.User;
+import com.mimaraslan.javabeans.datatransferobject.dto.PersonDTO;
+import com.mimaraslan.javabeans.datatransferobject.model.Person;
 
 public class ModelmapperApplication {
 
@@ -15,8 +15,8 @@ public class ModelmapperApplication {
 	}
 
 	private static void simpleModelMappingDemo() {
-		User sourceUser = new User(1, "Mimar", "mimar.aslan@gmail.com", "123456789", "Istanbul");
-		UserDTO targetUserDTO = new UserDTO();
+		Person sourceUser = new Person(1, "Mimar", "mimar.aslan@gmail.com", "123456789", "Istanbul");
+		PersonDTO targetUserDTO = new PersonDTO();
 		ModelMapper modelMapper = new ModelMapper();
 
 		modelMapper.map(sourceUser, targetUserDTO);
@@ -25,15 +25,14 @@ public class ModelmapperApplication {
 		System.out.println(targetUserDTO.getEmailAddress());
 		System.out.println(targetUserDTO.getMobileNumber());
 		System.out.println(targetUserDTO.getUserCity());
-
 	}
 
 	private static void explicitModelMappingDemo() {
-		User sourceUser = new User(1, "Mimar", "mimar.aslan@gmail.com", "123456789", "Istanbul");
-		UserDTO targetUserDTO = new UserDTO();
+		Person sourceUser = new Person(1, "Mimar", "mimar.aslan@gmail.com", "123456789", "Istanbul");
+		PersonDTO targetUserDTO = new PersonDTO();
 		ModelMapper modelMapper = new ModelMapper();
 		
-		modelMapper.addMappings(new PropertyMap<User, UserDTO>() {
+		modelMapper.addMappings(new PropertyMap<Person, PersonDTO>() {
 			protected void configure() {
 				map().setUserCity(source.getCity());
 			}

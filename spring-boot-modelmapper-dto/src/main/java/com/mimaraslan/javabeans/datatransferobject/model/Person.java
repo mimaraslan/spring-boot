@@ -1,4 +1,4 @@
-package com.mimaraslan.modelmapper.model;
+package com.mimaraslan.javabeans.datatransferobject.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,24 +6,24 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class User {
+public class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private int id;
     private String name;
     private String emailAddress;
     private String mobileNumber;
     private String city;
 
-    public User(long id, String name, String emailAddress, String mobileNumber) {
+    public Person(int id, String name, String emailAddress, String mobileNumber) {
         this.id = id;
         this.name = name;
         this.emailAddress = emailAddress;
         this.mobileNumber = mobileNumber;
     }
 
-    public User(long id, String name, String emailAddress, String mobileNumber, String city) {
+    public Person(int id, String name, String emailAddress, String mobileNumber, String city) {
         this.id = id;
         this.name = name;
         this.emailAddress = emailAddress;
@@ -31,11 +31,11 @@ public class User {
         this.city = city;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

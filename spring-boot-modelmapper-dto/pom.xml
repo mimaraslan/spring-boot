@@ -12,8 +12,8 @@
 	<groupId>com.mimaraslan</groupId>
 	<artifactId>spring-boot-modelmapper-dto</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-modelmapper-dto</name>
-	<description>Model Mapper to DTO for Spring Boot</description>
+	<name>spring-boot-pojo-javabean-businessobject-valueobject-datatransferobject</name>
+	<description>POJO, JavaBean, Business Object, Value Object, Data Transfer Object, Model Mapper to DTO for Spring Boot</description>
 
 	<properties>
 		<java.version>1.8</java.version>

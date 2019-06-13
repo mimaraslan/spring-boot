@@ -1,6 +1,6 @@
-package com.mimaraslan.modelmapper.dto;
+package com.mimaraslan.javabeans.datatransferobject.dto;
 
-public class UserDTO {
+public class PersonDTO {
 
     private String name;
     private String emailAddress;
