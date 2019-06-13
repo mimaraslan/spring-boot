@@ -1,4 +1,4 @@
-package com.mimaraslan.pojo;
+package _001_pojo;
 
 // Bu sınıf bir POJO'dur. 
 public class Person {

@@ -1,4 +1,4 @@
-package com.mimaraslan.javabeans.datatransferobject.dto;
+package _005_javabeans.datatransferobject.dto;
 
 public class PersonDTO {
 

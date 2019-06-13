@@ -1,4 +1,4 @@
-package com.mimaraslan.javabeans.valueobject;
+package _004_javabeans.businessobject;
 
 public class Address {
 	

@@ -1,4 +1,4 @@
-package com.mimaraslan.javabeans.datatransferobject.model;
+package _005_javabeans.datatransferobject.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,10 +1,10 @@
-package com.mimaraslan.javabeans.datatransferobject;
+package _005_javabeans.datatransferobject;
 
 import org.modelmapper.ModelMapper;
 import org.modelmapper.PropertyMap;
 
-import com.mimaraslan.javabeans.datatransferobject.dto.PersonDTO;
-import com.mimaraslan.javabeans.datatransferobject.model.Person;
+import _005_javabeans.datatransferobject.dto.PersonDTO;
+import _005_javabeans.datatransferobject.model.Person;
 
 public class ModelmapperApplication {
 

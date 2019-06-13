@@ -1,4 +1,4 @@
-package com.mimaraslan.javabeans.valueobject;
+package _003_javabeans.valueobject;
 
 import java.io.Serializable;
 
@@ -50,7 +50,5 @@ public class Person implements Serializable {
 	        this.value = value;
 	    }
 	}
-	
-	
 	
 }

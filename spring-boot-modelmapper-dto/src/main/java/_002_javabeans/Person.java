@@ -1,8 +1,9 @@
-package com.mimaraslan.javabeans.businessobject;
+package _002_javabeans;
+
 import java.io.Serializable;
 
-//Bu sınıf bir BusinessObject'tir.  
-public class Person implements Serializable {
+//Bu sınıf bir JavaBean'dir. 
+public class Person implements Serializable { 
 	
 	private static final long serialVersionUID = 1L; //Serializable var.
 	
@@ -32,7 +33,4 @@ public class Person implements Serializable {
 		this.personName = personName;
 	}
 	
-	public double getCalculateTotal() { // Sıradan metotları var.
-		return 9600.00;
-	}
 }
