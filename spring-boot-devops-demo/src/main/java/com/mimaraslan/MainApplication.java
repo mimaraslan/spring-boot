@@ -17,5 +17,4 @@ public class MainApplication {
 	public String greeting() {
 		return "Hello Spring Boot";
 	}
-
 }

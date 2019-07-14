@@ -12,9 +12,9 @@ import lombok.ToString;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @ToString
-public class Employee {	
-	private  @NonNull Long id;
-	private  @NonNull String firstName;
-	private  @NonNull String lastName;
-	private  @NonNull String email;
+public class Employee {
+	private @NonNull Long id;
+	private @NonNull String firstName;
+	private @NonNull String lastName;
+	private @NonNull String email;
 }
