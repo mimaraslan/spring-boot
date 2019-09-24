@@ -12,7 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @SpringBootApplication
 @RestController
 /* @CrossOrigin(origins="*") */
-public class MyPortalApplication {
+public class MyPortalServerApplication {
 
 	@CrossOrigin(origins = "http://localhost:9090")
 	@GetMapping("/access")
@@ -27,11 +27,10 @@ public class MyPortalApplication {
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/*").allowedOrigins("http://localhost:9090");
 			}
-
 		};
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(MyPortalApplication.class, args);
+		SpringApplication.run(MyPortalServerApplication.class, args);
 	}
 }

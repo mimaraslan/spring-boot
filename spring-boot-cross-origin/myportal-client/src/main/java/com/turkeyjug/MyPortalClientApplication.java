@@ -15,13 +15,12 @@ public class MyPortalClientApplication {
 	}
 
 	/*
-	 * 'http://localhost:8080/access' from origin 'http://localhost:9090' has been
-	 * blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on
-	 * the requested resource.
+	 * 'http://localhost:8080/access' from origin 'http://localhost:9090' 
+	 * has been blocked by CORS policy: 
+	 * No 'Access-Control-Allow-Origin' header is present on the requested resource.
 	 */
 
 	public static void main(String[] args) {
 		SpringApplication.run(MyPortalClientApplication.class, args);
 	}
-
 }
