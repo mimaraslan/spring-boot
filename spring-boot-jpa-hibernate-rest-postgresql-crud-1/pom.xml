@@ -9,10 +9,10 @@
 		<relativePath/>
 	</parent>
 	<groupId>com.mimaraslan</groupId>
-	<artifactId>spring-boot-jpa-hibernate-restf-crud-postgresql1</artifactId>
+	<artifactId>spring-boot-jpa-hibernate-rest-postgresql-crud-1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-jpa-hibernate-restf-crud-postgresql1</name>
-	<description>spring-boot-jpa-hibernate-restf-crud-postgresql</description>
+	<name>spring-boot-jpa-hibernate-rest-postgresql-crud-1</name>
+	<description>spring-boot-jpa-hibernate-rest-postgresql-crud-1</description>
 
 	<properties>
 		<java.version>1.8</java.version>
