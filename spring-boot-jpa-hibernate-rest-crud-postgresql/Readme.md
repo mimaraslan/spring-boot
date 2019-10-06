@@ -2,16 +2,14 @@
 
 ## Tutorial
 
-Check out the complete tutorial on the CalliCoder blog -
-
-[Spring Boot, PostgreSQL, JPA, Hibernate RESTful CRUD API Example](https://www.callicoder.com/spring-boot-jpa-hibernate-postgresql-restful-crud-api-example/)
+[Spring Boot, PostgreSQL, JPA, Hibernate RESTful CRUD API Example](https://github.com/mimaraslan/spring-boot/tree/master/spring-boot-jpa-hibernate-rest-crud-postgresql)
 
 ## Steps to Setup
 
 **1. Clone the repository**
 
 ```bash
-git clone https://github.com/callicoder/spring-boot-postgresql-jpa-hibernate-rest-api-demo.git
+git clone https://github.com/mimaraslan/spring-boot/tree/master/spring-boot-jpa-hibernate-rest-crud-postgresql.git
 ```
 
 **2. Configure PostgreSQL**
@@ -30,5 +28,5 @@ Alternatively, you can package the application in the form of a JAR file and the
 
 ```bash
 mvn clean package
-java -jar target/postgres-demo-0.0.1-SNAPSHOT.jar
+java -jar target/spring-boot-jpa-hibernate-rest-crud-postgresql-0.0.1-SNAPSHOT.jar
 ```
