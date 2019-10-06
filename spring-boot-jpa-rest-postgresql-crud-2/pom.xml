@@ -5,11 +5,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mimaraslan</groupId>
-	<artifactId>spring-boot-jpa-hibernate-rest-postgresql-crud-2</artifactId>
+	<artifactId>spring-boot-jpa-rest-postgresql-crud-2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>spring-boot-jpa-hibernate-rest-postgresql-crud-2</name>
-	<description>Spring Boot JPA Hibernate PostgreSQL CRUD</description>
+	<name>spring-boot-jpa-rest-postgresql-crud-2</name>
+	<description>Spring Boot JPA Hibernate RESTful PostgreSQL CRUD</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

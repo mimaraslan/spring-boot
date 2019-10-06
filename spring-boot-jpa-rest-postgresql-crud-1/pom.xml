@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.mimaraslan</groupId>
-	<artifactId>spring-boot-jpa-hibernate-rest-postgresql-crud-1</artifactId>
+	<artifactId>spring-boot-jpa-rest-postgresql-crud-1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-jpa-hibernate-rest-postgresql-crud-1</name>
-	<description>Spring Boot JPA Hibernate PostgreSQL CRUD</description>
+	<name>spring-boot-jpa-rest-postgresql-crud-1</name>
+	<description>Spring Boot JPA Hibernate RESTful PostgreSQL CRUD</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
