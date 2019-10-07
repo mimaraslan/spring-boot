@@ -49,11 +49,11 @@ public class UserController {
 	 http://localhost:8080/api/v1/users
 	
 	{
-    	"firstName": "Mimar",
-    	"lastName": "Aslan",
-    	"emailId": "mimar.aslan@gmail.com",
-    	"createdBy": "2019-10-06T18:24:56.314+0000",
-    	"updatedby": "2019-10-06T18:24:56.314+0000"
+		"firstName": "Mimar",
+		"lastName": "Aslan",
+		"emailId": "mimar.aslan@gmail.com",
+		"createdBy": "2019-10-06T18:24:56.314+0000",
+		"updatedby": "2019-10-06T18:24:56.314+0000"
 	}
 	*/
 	@PostMapping("/users")
@@ -66,9 +66,9 @@ public class UserController {
 	 http://localhost:8080/api/v1/users/1
 	
 	{
-    	"firstName": "Murat",
-    	"lastName": "Aylin",
-    	"emailId": "mimaraslan@hotmail.com"
+		"firstName": "Murat",
+		"lastName": "Aylin",
+		"emailId": "mimaraslan@hotmail.com"
 	}
 	*/
 	@PutMapping("/users/{id}")
