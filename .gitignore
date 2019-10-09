@@ -113,3 +113,4 @@ typings
 # Optional REPL history
 .node_repl_history
 spring-boot-jpa-hibernate-rest-crud-postgresql/mvnw
+spring-boot-jpa-rest-sample-crud/mvnw
