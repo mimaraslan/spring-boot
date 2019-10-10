@@ -15,21 +15,25 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.mimaraslan.model.User;
 import com.mimaraslan.repository.UserRepository;
+import com.mimaraslan.service.UserService;
 
 @RestController
 @RequestMapping("/api/v1")
 public class UserController {
 
 	@Autowired
-	private UserRepository userRepository;
+	private UserService userService;
 
+	@Autowired
+	private UserRepository userRepository;
 	
 	// http://localhost:8080/api/v1/users
 	@GetMapping("/users")
 	public List<User> getUserAll() {
-		return userRepository.findAll();
+		return userService.getUserAll();
 	}
 
+	
 	// http://localhost:8080/api/v1/users/1
 	@GetMapping("/users/{id}")
 	public ResponseEntity<User> getUserFindById(@PathVariable(value = "id") Long id) {
