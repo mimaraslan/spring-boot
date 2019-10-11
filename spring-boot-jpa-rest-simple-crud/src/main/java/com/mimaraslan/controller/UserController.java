@@ -20,13 +20,14 @@ import com.mimaraslan.service.UserService;
 @RestController
 @RequestMapping("/api/v1")
 public class UserController {
-
+	
+//	@Autowired
+//	private UserRepository userRepository;
+	
 	@Autowired
 	private UserService userService;
-
-	@Autowired
-	private UserRepository userRepository;
 	
+
 	// http://localhost:8080/api/v1/users
 	@GetMapping("/users")
 	public List<User> getUserAll() {
@@ -36,9 +37,11 @@ public class UserController {
 	
 	// http://localhost:8080/api/v1/users/1
 	@GetMapping("/users/{id}")
-	public ResponseEntity<User> getUserFindById(@PathVariable(value = "id") Long id) {
-		User user = userRepository.findById(id).get();
+	public ResponseEntity<User> getUserFindById(@PathVariable("id") Long id) {
+	 /* User user = userRepository.findById(id).get();
 		return ResponseEntity.ok().body(user);
+		*/
+		return userService.getUserById(id);
 	}
 
 	
@@ -52,7 +55,8 @@ public class UserController {
 	*/
 	@PostMapping("/users")
 	public User createUser(@RequestBody User user) {
-		return userRepository.save(user);
+		// return userRepository.save(user);
+		return userService.insertUser(user);
 	}
 
 	
@@ -65,21 +69,25 @@ public class UserController {
 	}
 	*/
 	@PutMapping("/users/{id}")
-	public ResponseEntity<User> updateUserById(@RequestBody User updateUser, @PathVariable Long id) {
-		User user = userRepository.findById(id).get();
-		user.setFirstName(updateUser.getFirstName());
-		user.setLastName(updateUser.getLastName());
-		userRepository.save(user);
+	public ResponseEntity<User> updateUserById(@RequestBody User user, @PathVariable(value = "id") Long id) {
+	  /*User userNewValue = userRepository.findById(id).get();
+		userNewValue.setFirstName(updateUser.getFirstName());
+		userNewValue.setLastName(updateUser.getLastName());
+		userRepository.save(userNewValue);
 		return ResponseEntity.ok().body(user);
+		*/
+		return userService.updateUserById(user, id);
 	}
 
+	
 	// http://localhost:8080/api/v1/users/1
 	@DeleteMapping("/users/{id}")
-	public String deleteUserById(@PathVariable(value = "id") Long id) {
-		User user = userRepository.findById(id).get();
+	public String deleteUserById(@PathVariable("id") Long id) {
+	  /*User user = userRepository.findById(id).get();
 		userRepository.delete(user);
 		return "OK";
-
+		*/
+		return userService.deleteUserById(id);
 	}
 
 }
