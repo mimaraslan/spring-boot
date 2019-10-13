@@ -16,9 +16,7 @@ ARG JAR_FILE=target/spring-boot-dockerize.jar
 # Add the application's jar to the container
 ADD ${JAR_FILE} spring-boot-dockerize.jar 
 
-#RUN bash -c 'touch /spring-boot-dockerize.jar'
-
-#ENTRYPOINT ["java","-jar","/spring-boot-dockerize.jar"]
-
 # Run the jar file 
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/spring-boot-dockerize.jar"]
+ENTRYPOINT ["java","-jar","spring-boot-dockerize.jar"]
+
+#ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/spring-boot-dockerize.jar"]
