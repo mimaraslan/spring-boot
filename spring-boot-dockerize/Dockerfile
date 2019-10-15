@@ -18,5 +18,4 @@ ADD ${JAR_FILE} spring-boot-dockerize.jar
 
 # Run the jar file 
 ENTRYPOINT ["java","-jar","spring-boot-dockerize.jar"]
-
 #ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/spring-boot-dockerize.jar"]
