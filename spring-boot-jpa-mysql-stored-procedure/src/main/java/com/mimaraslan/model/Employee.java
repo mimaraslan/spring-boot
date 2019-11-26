@@ -10,13 +10,23 @@ import javax.persistence.*;
 
 		@NamedStoredProcedureQuery(name= "my-procedure-2", procedureName= "findEmployeeByDepartment",
 				parameters= {
-				@StoredProcedureParameter(mode= ParameterMode.IN, name= "emp_department", type= String.class)
+				@StoredProcedureParameter(
+						mode= ParameterMode.IN,
+						name= "emp_department",
+						type= String.class)
 		}),
 
 		@NamedStoredProcedureQuery(name= "my-procedure-3", procedureName= "findEmployeeCountByPosition",
 				parameters= {
-				@StoredProcedureParameter(mode= ParameterMode.IN, name= "emp_position", type= String.class),
-				@StoredProcedureParameter(mode= ParameterMode.OUT, name= "position_count", type= Integer.class)
+				@StoredProcedureParameter(
+						mode= ParameterMode.IN,
+						name= "emp_position",
+						type= String.class),
+
+				@StoredProcedureParameter(
+						mode= ParameterMode.OUT,
+						name= "position_count",
+						type= Integer.class)
 		})
 })
 public class Employee {
