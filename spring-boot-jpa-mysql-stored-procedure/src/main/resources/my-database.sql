@@ -24,3 +24,10 @@ INSERT INTO employee (id, name, position, department, salary) VALUES (5, 'Svetla
 INSERT INTO employee (id, name, position, department, salary) VALUES (6, 'Dasha Masha', 'Lead', 'Software', 14000);
 
 SELECT * FROM employee;
+
+
+CALL findAllEmployees();
+
+CALL findEmployeeByDepartment("Software");
+
+CALL findEmployeeCountByPosition('Lead');
