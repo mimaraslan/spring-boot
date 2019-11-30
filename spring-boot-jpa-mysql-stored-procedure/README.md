@@ -1,7 +1,7 @@
 REST API DOCUMENTATION
 
 Get all employees
-http://localhost:8002/api/employee/getall
+http://localhost:8002/api/employee/all
 
 Get employees by department
 http://localhost:8082/api/employee/department/Administration
