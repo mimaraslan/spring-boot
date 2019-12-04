@@ -18,7 +18,7 @@ public class EmployeeRepository {
 	 */
 	@SuppressWarnings("unchecked")
 	public Iterable<Employee> getAllEmployees() {
-		return em.createNamedStoredProcedureQuery("procedure-one").getResultList();
+		return em.createNamedStoredProcedureQuery("my-procedure-1").getResultList();
 	}
 
 	/**
@@ -28,7 +28,7 @@ public class EmployeeRepository {
 	 */
 	@SuppressWarnings("unchecked")
 	public Iterable<Employee> getEmployeesByDepartment(String input) {
-		return em.createNamedStoredProcedureQuery("procedure-two").setParameter("emp_department", input).getResultList();
+		return em.createNamedStoredProcedureQuery("my-procedure-2").setParameter("emp_department", input).getResultList();
 	}
 
 	/**
@@ -37,6 +37,6 @@ public class EmployeeRepository {
 	 * @return
 	 */
 	public Integer getEmployeesCountByPosition(String input) {
-		return (Integer) em.createNamedStoredProcedureQuery("procedure-third").setParameter("emp_position", input).getOutputParameterValue("position_count");
+		return (Integer) em.createNamedStoredProcedureQuery("my-procedure-3").setParameter("emp_position", input).getOutputParameterValue("position_count");
 	}
 }
