@@ -23,8 +23,8 @@ public class EmployeeController {
 	 * Method to fetch all employees from the db.
 	 * @return
 	 */
-	// http://localhost:8002/api/employee/getall
-	@GetMapping(value= "/getall")
+	// http://localhost:8002/api/employee/all
+	@GetMapping(value= "/all")
 	public Iterable<Employee> getAll() {
 		logger.debug("Get all employees.");
 		return employeeRepository.getAllEmployees();
