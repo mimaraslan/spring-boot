@@ -15,5 +15,5 @@ word
 VALUE
 Anya|Katerina|Anya|Svetlana|Lena|Rita|Lena|Katerina|Katerina
 
-![Spring Boot + Apache Spark](src/main/resources/readme-wordcount.png)
+![Spring Boot + Apache Spark](src/main/resources/images/readme-wordcount.png)
 
