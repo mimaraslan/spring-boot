@@ -7,7 +7,7 @@ import org.apache.spark.api.java.JavaSparkContext;
 import java.util.Arrays;
 import java.util.Map;
 
-public class SparkTest {
+public class SparkTest2 {
 
 	public static void main(String[] args) {
 		SparkConf conf = new SparkConf().setAppName("Test").setMaster("local[1]");
