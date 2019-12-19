@@ -1,4 +1,4 @@
-package com.mimaraslan;
+package com.mimaraslan.algorithm;
 
 //	Simple K means creating 2 partitions with 2-dimensional dataset in Java
 import java.util.*;
