@@ -7,7 +7,7 @@ import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 
-public class _004_RDDforEach {
+public class _011_RDDforEach {
 
     public static void main(String[] args) {
         // configure spark

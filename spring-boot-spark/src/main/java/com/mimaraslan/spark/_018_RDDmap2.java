@@ -6,7 +6,7 @@ import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 
-public class _015_RDDreduce {
+public class _018_RDDmap2 {
 
     public static void main(String[] args) {
         // configure spark
@@ -15,12 +15,15 @@ public class _015_RDDreduce {
         // start a spark context
         JavaSparkContext sc = new JavaSparkContext(sparkConf);
 
-        // read text file to RDD
-        JavaRDD<Integer> myNumbers = sc.parallelize(Arrays.asList(1, 2, 3, 4, 5));
+        // initialize an integer RDD
+        JavaRDD<Integer> numbers = sc.parallelize(Arrays.asList(10, 50, 200, 470, 500));
 
-        // aggregate numbers using addition operator
-        int sum = myNumbers.reduce((a, b) -> a + b);
+        // map each line to number of words in the line
+        JavaRDD<Double> log_values = numbers.map(x -> Math.log(x));
 
-        System.out.println("Sum of numbers is : " + sum);
+        // collect RDD for printing
+        for (double value : log_values.collect()) {
+            System.out.println(value);
+        }
     }
 }

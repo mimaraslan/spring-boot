@@ -8,7 +8,7 @@ import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.api.java.function.VoidFunction;
 
-public class _007_SparkParallelize {
+public class _015_SparkParallelize {
 
     public static void main(String[] args) {
         // configure spark
