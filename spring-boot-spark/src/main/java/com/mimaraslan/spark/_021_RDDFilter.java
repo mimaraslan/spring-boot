@@ -11,7 +11,7 @@ import org.apache.spark.api.java.function.Function;
 
 import scala.Tuple2;
 
-public class _021_FilterRDD {
+public class _021_RDDFilter {
 
     public static void main(String[] args) {
         // configure spark

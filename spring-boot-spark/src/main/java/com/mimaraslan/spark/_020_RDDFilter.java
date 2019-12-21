@@ -8,7 +8,7 @@ import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.api.java.function.Function;
 
-public class _020_FilterRDD {
+public class _020_RDDFilter {
 
     public static void main(String[] args) {
         // configure spark

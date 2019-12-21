@@ -1,10 +1,10 @@
 package com.mimaraslan.spark;
 
-import java.util.Arrays;
-
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
+
+import java.util.Arrays;
 
 public class _018_RDDmap2 {
 
