@@ -5,7 +5,7 @@ import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.api.java.function.VoidFunction;
 
-public class _001_PrintRDD {
+public class _005_PrintRDD {
 
     public static void main(String[] args) {
         // configure spark
