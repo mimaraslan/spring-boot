@@ -12,13 +12,13 @@ import com.mimaraslan.service.WordCountService;
 @RestController
 public class WordCountController {
 
-	@Autowired
-	WordCountService service;
+    @Autowired
+    WordCountService service;
 
-	@PostMapping("/wordcount")
-	public Map<String, Long> count(@RequestParam(required = false) String words) {
-		List<String> wordList = Arrays.asList(words.split("\\|"));
-		return service.getCount(wordList);
-	}
+    @PostMapping("/wordcount")
+    public Map<String, Long> count(@RequestParam(required = false) String words) {
+        List<String> wordList = Arrays.asList(words.split("\\|"));
+        return service.getCount(wordList);
+    }
 
 }

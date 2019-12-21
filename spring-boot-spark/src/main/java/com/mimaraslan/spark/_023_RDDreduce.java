@@ -12,6 +12,7 @@ public class _023_RDDreduce {
         // configure spark
         SparkConf sparkConf = new SparkConf().setAppName("Read Text to RDD")
                 .setMaster("local[2]").set("spark.executor.memory", "2g");
+
         // start a spark context
         JavaSparkContext sc = new JavaSparkContext(sparkConf);
 

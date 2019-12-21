@@ -14,6 +14,7 @@ public class _015_SparkParallelize {
         // configure spark
         SparkConf sparkConf = new SparkConf().setAppName("Print Elements of RDD")
                 .setMaster("local[2]").set("spark.executor.memory", "2g");
+
         // start a spark context
         JavaSparkContext sc = new JavaSparkContext(sparkConf);
 

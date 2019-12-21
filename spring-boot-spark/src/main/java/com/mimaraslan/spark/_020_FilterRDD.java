@@ -14,8 +14,10 @@ public class _020_FilterRDD {
         // configure spark
         SparkConf sparkConf = new SparkConf().setAppName("Spark RDD Filter")
                 .setMaster("local[2]").set("spark.executor.memory", "2g");
+
         // start a spark context
         JavaSparkContext sc = new JavaSparkContext(sparkConf);
+
         // read list to RDD
         List<Integer> data = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         JavaRDD<Integer> rdd = sc.parallelize(data, 1);

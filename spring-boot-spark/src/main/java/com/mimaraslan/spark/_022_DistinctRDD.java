@@ -14,6 +14,7 @@ public class _022_DistinctRDD {
         SparkConf sparkConf = new SparkConf().setAppName("Spark RDD Distinct")
                 .setMaster("local[2]")
                 .set("spark.executor.memory", "2g");
+
         // start a spark context
         JavaSparkContext sc = new JavaSparkContext(sparkConf);
 

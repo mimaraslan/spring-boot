@@ -7,12 +7,13 @@ import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import com.google.common.collect.ImmutableList;
 
-public class _000_CustomObjectsRDD {
+public class _004_CustomObjectsRDD {
 
     public static void main(String[] args) {
         // configure spark
         SparkConf sparkConf = new SparkConf().setAppName("Print Elements of RDD")
                 .setMaster("local[2]").set("spark.executor.memory","2g");
+
         // start a spark context
         JavaSparkContext sc = new JavaSparkContext(sparkConf);
 
