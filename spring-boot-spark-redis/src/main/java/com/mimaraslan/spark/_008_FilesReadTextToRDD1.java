@@ -4,12 +4,12 @@ import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 
-public class _004_FilesReadTextToRDD1 {
+public class _008_FilesReadTextToRDD1 {
 
     public static void main(String[] args) {
 // configure spark
         SparkConf sparkConf = new SparkConf().setAppName("Read Multiple Text Files to RDD")
-                .setMaster("local[2]").set("spark.executor.memory","2g");
+                .setMaster("local[2]").set("spark.executor.memory", "2g");
         // start a spark context
         JavaSparkContext sc = new JavaSparkContext(sparkConf);
 
@@ -20,7 +20,7 @@ public class _004_FilesReadTextToRDD1 {
         JavaRDD<String> lines = sc.textFile(files);
 
         // collect RDD for printing
-        for(String line:lines.collect()){
+        for (String line : lines.collect()) {
             System.out.println(line);
         }
     }

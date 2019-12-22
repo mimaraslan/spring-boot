@@ -4,7 +4,7 @@ import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 
-public class _020_JSONsqlExample {
+public class _028_JSONsqlExample {
 
     public static void main(String[] args) {
         SparkSession spark = SparkSession
@@ -14,9 +14,7 @@ public class _020_JSONsqlExample {
                 .getOrCreate();
 
         // A JSON dataset is pointed to by path.
-        // The path can be either a single text file or a direc
-        //
-        //       tory storing text files
+        // The path can be either a single text file
         Dataset<Row> people = spark.read().format("json").option("multiline", true).json("data/rdd/input/jsonfile/employees1.json");
 
         // The inferred schema can be visualized using the printSchema() method
@@ -27,11 +25,10 @@ public class _020_JSONsqlExample {
         people.createOrReplaceTempView("people");
 
         // SQL statements can be run by using the sql methods provided by spark
-        Dataset<Row> namesDF = spark.sql("SELECT name, salary FROM people WHERE salary>3500 ");
+        Dataset<Row> namesDF = spark.sql("SELECT name, salary FROM people WHERE salary > 3500 ");
         System.out.println("\n\nSQL Result\n=======================");
         namesDF.show();
 
-        // stop spark session
         spark.stop();
     }
 }

@@ -1,13 +1,13 @@
 package com.mimaraslan.spark;
 
-import org.apache.spark.sql.Dataset;
+import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 
-public class _006_JSONtoDataset {
+public class _013_JSONtoRDD2_Multiline {
 
     public static void main(String[] args) {
-        _006_JSONtoDataset obj = new _006_JSONtoDataset();
+        _013_JSONtoRDD2_Multiline obj = new _013_JSONtoRDD2_Multiline();
         obj.start();
     }
 
@@ -22,14 +22,12 @@ public class _006_JSONtoDataset {
 
         String jsonPath = "data/rdd/input/employees.json";
 
-        // read list to Dataset
-        Dataset<Row> df = spark.read()
-                .format("json")
-                .option("multiline", true)
-                .load(jsonPath);
+        // read list to RDD
+        JavaRDD<Row> items = spark.read().format("json").option("multiline", true).json(jsonPath).toJavaRDD();
 
-// The inferred schema can be visualized using the printSchema() method
-        df.show(5, 13);
-        df.printSchema();
+        items.foreach(item -> {
+            System.out.println(item);
+        });
+
     }
 }

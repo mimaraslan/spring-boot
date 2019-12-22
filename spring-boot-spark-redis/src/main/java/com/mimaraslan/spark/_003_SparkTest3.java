@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-public class _000_SparkTest3 {
+public class _003_SparkTest3 {
 
 	public static void main(String[] args) {
 		//	SparkConf conf = new SparkConf().setAppName("Test").setMaster("local[1]");

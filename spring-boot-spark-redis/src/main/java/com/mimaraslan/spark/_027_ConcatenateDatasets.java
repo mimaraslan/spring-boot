@@ -4,7 +4,7 @@ import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 
-public class _019_ConcatenateDatasets {
+public class _027_ConcatenateDatasets {
 
     public static void main(String[] args) {
         // configure spark
@@ -13,8 +13,6 @@ public class _019_ConcatenateDatasets {
                 .appName("Spark Example - Append/Concatenate two Datasets")
                 .master("local[2]")
                 .getOrCreate();
-
-
 
         Dataset<Row> ds1 = spark.read().format("json").option("multiline", true).json("data/rdd/input/employees1.json");
         Dataset<Row> ds2 = spark.read().format("json").option("multiline", true).json("data/rdd/input/employees2.json");

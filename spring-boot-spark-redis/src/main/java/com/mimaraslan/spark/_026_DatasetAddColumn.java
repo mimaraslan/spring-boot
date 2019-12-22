@@ -5,7 +5,7 @@ import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 import org.apache.spark.sql.functions;
 
-public class _018_DatasetAddColumn {
+public class _026_DatasetAddColumn {
 
     public static void main(String[] args) {
         // configure spark
@@ -27,7 +27,7 @@ public class _018_DatasetAddColumn {
         ds.show();
 
         // add column to ds
-        Dataset<Row> newDs = ds.withColumn("new_col",functions.lit(1));
+        Dataset<Row> newDs = ds.withColumn("new_col", functions.lit(1));
 
         // print dataset after adding new column
         newDs.show();

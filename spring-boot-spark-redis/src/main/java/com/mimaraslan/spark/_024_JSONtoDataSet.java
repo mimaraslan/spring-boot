@@ -7,9 +7,9 @@ import org.apache.spark.sql.Encoder;
 import org.apache.spark.sql.Encoders;
 import org.apache.spark.sql.SparkSession;
 
-public class _017_WriteDataSetToJSON {
+public class _024_JSONtoDataSet {
 
-    public static class Employee implements Serializable{
+    public static class Employee implements Serializable {
         public String name;
         public int salary;
     }
@@ -18,19 +18,21 @@ public class _017_WriteDataSetToJSON {
         // configure spark
         SparkSession spark = SparkSession
                 .builder()
-                .appName("Spark Example - Write Dataset to JSON File")
+                .appName("Read JSON File to DataSet")
                 .master("local[2]")
                 .getOrCreate();
 
+        // Java Bean (data class) used to apply schema to JSON data
         Encoder<Employee> employeeEncoder = Encoders.bean(Employee.class);
+
         String jsonPath = "data/rdd/input/employees1.json";
 
+        // read JSON file to Dataset
         Dataset<Employee> ds = spark.read()
                 .format("json")
                 .option("multiline", true)
                 .json(jsonPath).as(employeeEncoder);
-
-        // write dataset to JSON file
-        ds.write().json("data/rdd/output/out_employees/");
+        ds.show();
+        // ds.show(3, 2);
     }
 }
