@@ -22,10 +22,10 @@ public class _002_SparkRedis {
         jedis.lpush("studentList", "Olga");
 
         // Get the stored data and print it
-        List<String> myList = jedis.lrange("studentList", 0 ,15);
+        List<String> myList = jedis.lrange("studentList", 0, 15);
 
-        for(int i = 0; i<myList.size(); i++) {
-            System.out.println(i+" Stored string in redis:: "+myList.get(i));
+        for (int i = 0; i < myList.size(); i++) {
+            System.out.println(i + " Stored string in redis:: " + myList.get(i));
         }
 
         SparkConf conf = new SparkConf().setAppName("Test").setMaster("local[1]");

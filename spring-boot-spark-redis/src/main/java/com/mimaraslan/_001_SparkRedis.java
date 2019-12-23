@@ -18,7 +18,7 @@ public class _001_SparkRedis {
         jedis.set("studentName", "Katerina");
 
         // Get the stored data and print it
-        System.out.println("Stored string in redis:: "+ jedis.get("studentName"));
+        System.out.println("Stored string in redis:: " + jedis.get("studentName"));
 
 
         SparkConf conf = new SparkConf().setAppName("Test").setMaster("local[1]");
