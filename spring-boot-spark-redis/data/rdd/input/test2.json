@@ -1,0 +1,23 @@
+[
+  {
+    "datasetid": "foreclosure-2006-2016",
+    "recordid": "629979c85b1cc68c1d4ee8cc351050bfe3592c62",
+    "fields": {
+      "parcel_number": "110138",
+      "geocode": [
+        36.0013755,
+        -78.8922549
+      ],
+      "address": "217 E CORPORATION ST",
+      "year": "2006"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -78.8922549,
+        36.0013755
+      ]
+    },
+    "record_timestamp": "2017-03-06T12:41:48-05:00"
+  }
+]
