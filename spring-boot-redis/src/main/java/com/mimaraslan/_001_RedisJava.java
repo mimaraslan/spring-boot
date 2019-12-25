@@ -3,7 +3,7 @@ package com.mimaraslan;
 import redis.clients.jedis.Jedis; 
 
 
-public class RedisJava { 
+public class _001_RedisJava {
 	   public static void main(String[] args) { 
 	      //Connecting to Redis server on localhost 
 	      Jedis jedis = new Jedis("localhost"); 
