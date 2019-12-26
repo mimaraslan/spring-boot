@@ -1,2 +1,0 @@
-This is File 2
-Learn to read multiple text files to a single RDD
