@@ -49,6 +49,7 @@ mvnw.*
 *.iws
 out/
 .idea_modules/
+mvnw
 
 ### NetBeans ###
 nbproject/private/
