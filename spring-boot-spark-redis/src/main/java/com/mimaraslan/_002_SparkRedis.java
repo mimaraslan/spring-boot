@@ -11,10 +11,10 @@ import java.util.Map;
 
 public class _002_SparkRedis {
     public static void main(String[] args) {
+    	
         //Connecting to Redis server on localhost
         Jedis jedis = new Jedis("localhost");
         System.out.println("Connection to server sucessfully");
-
 
         //store data in redis list
         jedis.lpush("studentList", "Katerina");

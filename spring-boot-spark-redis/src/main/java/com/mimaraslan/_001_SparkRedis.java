@@ -10,6 +10,7 @@ import java.util.Map;
 
 public class _001_SparkRedis {
     public static void main(String[] args) {
+    	
         //Connecting to Redis server on localhost
         Jedis jedis = new Jedis("localhost");
         System.out.println("Connection to server sucessfully");

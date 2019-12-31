@@ -16,7 +16,6 @@ public class _003_RedisListJava {
       jedis.lpush("studentList", "B");
       jedis.lpush("studentList", "C");
 
-
       // Get the stored data and print it 
       List<String> myList = jedis.lrange("studentList", 0 ,15);
       
