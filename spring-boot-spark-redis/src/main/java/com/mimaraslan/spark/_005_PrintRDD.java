@@ -9,8 +9,10 @@ public class _005_PrintRDD {
 
     public static void main(String[] args) {
         // configure spark
-        SparkConf sparkConf = new SparkConf().setAppName("Print Elements of RDD")
-                .setMaster("local[2]").set("spark.executor.memory", "2g");
+        SparkConf sparkConf = new SparkConf()
+        		.setAppName("Print Elements of RDD")
+                .setMaster("local[2]")
+                .set("spark.executor.memory", "2g");
 
         // start a spark context
         JavaSparkContext sc = new JavaSparkContext(sparkConf);
@@ -19,7 +21,9 @@ public class _005_PrintRDD {
         JavaRDD<String> lines = sc.textFile("data/rdd/input/myfile1.txt");
 
         lines.foreach(new VoidFunction<String>() {
-            public void call(String line) {
+			private static final long serialVersionUID = 1L;
+
+			public void call(String line) {
                 System.out.println("* " + line);
             }
         });

@@ -7,9 +7,12 @@ import org.apache.spark.api.java.JavaSparkContext;
 public class _008_FilesReadTextToRDD1 {
 
     public static void main(String[] args) {
-// configure spark
-        SparkConf sparkConf = new SparkConf().setAppName("Read Multiple Text Files to RDD")
-                .setMaster("local[2]").set("spark.executor.memory", "2g");
+    	// configure spark
+        SparkConf sparkConf = new SparkConf()
+        		.setAppName("Read Multiple Text Files to RDD")
+                .setMaster("local[2]")
+                .set("spark.executor.memory", "2g");
+        
         // start a spark context
         JavaSparkContext sc = new JavaSparkContext(sparkConf);
 
