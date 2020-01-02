@@ -16,10 +16,11 @@ public class _016_Parallelize {
         it takes into account, the number of threads you mentioned
         while configuring your Spark Master. (setMaster(local[4]) where master can use 4 threads).
 */
-
         // configure spark
-        SparkConf sparkConf = new SparkConf().setAppName("Print Elements of RDD")
-                .setMaster("local[4]").set("spark.executor.memory", "2g");
+        SparkConf sparkConf = new SparkConf()
+        		.setAppName("Print Elements of RDD")
+                .setMaster("local[4]")
+                .set("spark.executor.memory", "2g");
         // 4 threads
 
         // start a spark context
@@ -35,7 +36,9 @@ public class _016_Parallelize {
         System.out.println("Number of partitions : " + rdd.getNumPartitions());
 
         rdd.foreach(new VoidFunction<Integer>() {
-            public void call(Integer number) {
+			private static final long serialVersionUID = 1L;
+
+			public void call(Integer number) {
                 System.out.println(number);
             }
         });
