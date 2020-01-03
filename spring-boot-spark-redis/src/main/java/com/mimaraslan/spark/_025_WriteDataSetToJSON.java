@@ -10,7 +10,8 @@ import org.apache.spark.sql.SparkSession;
 public class _025_WriteDataSetToJSON {
 
     public static class Employee implements Serializable {
-        public String name;
+		private static final long serialVersionUID = 1L;
+		public String name;
         public int salary;
     }
 

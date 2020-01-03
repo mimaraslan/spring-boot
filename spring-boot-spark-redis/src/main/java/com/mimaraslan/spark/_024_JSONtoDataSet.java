@@ -10,11 +10,13 @@ import org.apache.spark.sql.SparkSession;
 public class _024_JSONtoDataSet {
 
     public static class Employee implements Serializable {
-        public String name;
+		private static final long serialVersionUID = 1L;
+		public String name;
         public int salary;
     }
 
     public static void main(String[] args) {
+    	
         // configure spark
         SparkSession spark = SparkSession
                 .builder()

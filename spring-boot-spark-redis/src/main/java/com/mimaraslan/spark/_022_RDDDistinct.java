@@ -11,7 +11,8 @@ public class _022_RDDDistinct {
 
     public static void main(String[] args) {
         // configure spark
-        SparkConf sparkConf = new SparkConf().setAppName("Spark RDD Distinct")
+        SparkConf sparkConf = new SparkConf()
+        		.setAppName("Spark RDD Distinct")
                 .setMaster("local[2]")
                 .set("spark.executor.memory", "2g");
 
