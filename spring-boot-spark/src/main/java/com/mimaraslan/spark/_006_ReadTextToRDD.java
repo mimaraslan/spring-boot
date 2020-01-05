@@ -8,12 +8,13 @@ import org.apache.spark.api.java.function.VoidFunction;
 public class _006_ReadTextToRDD {
 
     public static void main(String[] args) {
-        // configure spark
         // SparkConf sparkConf = new SparkConf().setAppName("Read Text to RDD")
         //        .setMaster("local[2]").set("spark.executor.memory","2g");
 
-        SparkConf sparkConf = new SparkConf().setAppName("Print Elements of RDD")
-                .setMaster("local[2]").set("spark.executor.memory", "2g");
+        SparkConf sparkConf = new SparkConf()
+        		.setAppName("Print Elements of RDD")
+                .setMaster("local[2]")
+                .set("spark.executor.memory", "2g");
 
         // start a spark context
         JavaSparkContext sc = new JavaSparkContext(sparkConf);
@@ -30,7 +31,9 @@ public class _006_ReadTextToRDD {
         }
 
         lines.foreach(new VoidFunction<String>() {
-            public void call(String line) {
+			private static final long serialVersionUID = 1L;
+
+			public void call(String line) {
                 System.out.println("* " + line);
             }
         });

@@ -15,7 +15,8 @@ public class _021_RDDFilter {
 
     public static void main(String[] args) {
         // configure spark
-        SparkConf sparkConf = new SparkConf().setAppName("Spark RDD filter")
+        SparkConf sparkConf = new SparkConf()
+        		.setAppName("Spark RDD filter")
                 .setMaster("local[2]")
                 .set("spark.executor.memory", "2g");
 

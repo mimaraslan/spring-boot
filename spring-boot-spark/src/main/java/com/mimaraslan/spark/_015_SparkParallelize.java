@@ -12,8 +12,10 @@ public class _015_SparkParallelize {
 
     public static void main(String[] args) {
         // configure spark
-        SparkConf sparkConf = new SparkConf().setAppName("Print Elements of RDD")
-                .setMaster("local[2]").set("spark.executor.memory", "2g");
+        SparkConf sparkConf = new SparkConf()
+        		.setAppName("Print Elements of RDD")
+                .setMaster("local[2]")
+                .set("spark.executor.memory", "2g");
 
         // start a spark context
         JavaSparkContext sc = new JavaSparkContext(sparkConf);
@@ -29,7 +31,9 @@ public class _015_SparkParallelize {
         System.out.println("Number of partitions : " + rdd.getNumPartitions());
 
         rdd.foreach(new VoidFunction<Integer>() {
-            public void call(Integer number) {
+			private static final long serialVersionUID = 1L;
+
+			public void call(Integer number) {
                 System.out.println(number);
             }
         });

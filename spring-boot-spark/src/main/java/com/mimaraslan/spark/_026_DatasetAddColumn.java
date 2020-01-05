@@ -8,6 +8,7 @@ import org.apache.spark.sql.functions;
 public class _026_DatasetAddColumn {
 
     public static void main(String[] args) {
+    	
         // configure spark
         SparkSession spark = SparkSession
                 .builder()

@@ -7,6 +7,7 @@ import org.apache.spark.sql.SparkSession;
 public class _027_ConcatenateDatasets {
 
     public static void main(String[] args) {
+    	
         // configure spark
         SparkSession spark = SparkSession
                 .builder()

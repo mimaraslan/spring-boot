@@ -11,8 +11,10 @@ public class _011_RDDforEach {
 
     public static void main(String[] args) {
         // configure spark
-        SparkConf sparkConf = new SparkConf().setAppName("Spark RDD foreach Example")
-                .setMaster("local[2]").set("spark.executor.memory", "2g");
+        SparkConf sparkConf = new SparkConf()
+        		.setAppName("Spark RDD foreach Example")
+                .setMaster("local[2]")
+                .set("spark.executor.memory", "2g");
 
         // start a spark context
         JavaSparkContext sc = new JavaSparkContext(sparkConf);
