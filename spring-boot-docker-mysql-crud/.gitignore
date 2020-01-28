@@ -40,6 +40,7 @@ local.properties
 .factorypath
 .springBeans
 .sts4-cache
+.mvn/wrapper
 
 ### IntelliJ ###
 .idea/
