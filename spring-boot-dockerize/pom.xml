@@ -23,7 +23,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <dockerfile.maven.plugin.version>1.4.10</dockerfile.maven.plugin.version>
-        <docker.image.prefix>spring-boot-dockerize</docker.image.prefix>
+        <docker.image.prefix>mimaraslan</docker.image.prefix> <!-- YOUR DOCKER ID -->
     </properties>
 
     <dependencies>
@@ -35,16 +35,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
         </dependency>
     </dependencies>
 
@@ -54,7 +48,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-
 
             <plugin>
                 <groupId>com.spotify</groupId>
@@ -90,7 +83,6 @@
                     </execution>
                 </executions>
             </plugin>
-
 
         </plugins>
     </build>
