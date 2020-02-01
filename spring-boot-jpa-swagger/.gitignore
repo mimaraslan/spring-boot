@@ -40,7 +40,7 @@ local.properties
 .factorypath
 .springBeans
 .sts4-cache
-mvnw.*
+.mvn/wrapper
 
 ### IntelliJ ###
 .idea/
@@ -63,19 +63,17 @@ nb-configuration.xml
 ### VS Code ###
 .vscode/
 
-### BlueJ files ### 
+### BlueJ files ###
 *.ctxt
 
-### Log file ### 
+### Log file ###
 *.log
-
-### OS X ### 
-.DS_Store
 
 # compiled output
 /dist
 /tmp
 /out-tsc
+
 # Only exists if Bazel was run
 /bazel-out
 
