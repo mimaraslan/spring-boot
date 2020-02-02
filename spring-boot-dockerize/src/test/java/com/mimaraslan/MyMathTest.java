@@ -10,34 +10,8 @@ import org.junit.Test;
 
 import com.mimaraslan.controller.MyMath;
 
-
-public class MaintApplicationTests {
+public class MyMathTest {
 	MyMath myMath = new MyMath();
-
-	public void testAdd() {
-		String str = "Junit is working fine";
-		assertEquals("Junit is working fine", str);
-	}
-	
-	@Before
-	public void before() {
-		System.out.println("Before");
-	}
-
-	@After
-	public void after() {
-		System.out.println("After");
-	}
-
-	@BeforeClass
-	public static void beforeClass() {
-		System.out.println("Before Class");
-	}
-
-	@AfterClass
-	public static void afterClass() {
-		System.out.println("After Class");
-	}
 
 	// MyMath.sum
 	// 1,2,3 => 6
@@ -53,4 +27,3 @@ public class MaintApplicationTests {
 		assertEquals(3, myMath.sum(new int[] { 3 }));
 	}
 }
-
