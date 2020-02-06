@@ -16,7 +16,6 @@ public class SpringProfilesController {
 
 	@GetMapping("/")
 	public String getActiveProfile() {
-
 		return "Active profile is :: " + profile + " <br/> <br/>Configured bean value is :: " + myBean;
 	}
 }
