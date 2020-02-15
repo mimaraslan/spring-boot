@@ -2,7 +2,7 @@ package com.mimaraslan.v3;
 
 public class AppMain {
 	public static void main(String[] args) {
-		 
+
 		RubberDuck rubberDuck = new RubberDuck();
 		rubberDuck.display();
 		rubberDuck.performFly();
@@ -25,6 +25,5 @@ public class AppMain {
 		decoyDuck.display();
 		decoyDuck.performFly();
 		decoyDuck.performQuack();
-		
 	}
 }

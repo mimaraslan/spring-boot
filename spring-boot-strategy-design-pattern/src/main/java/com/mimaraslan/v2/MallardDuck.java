@@ -1,7 +1,7 @@
 package com.mimaraslan.v2;
 
 public class MallardDuck extends Duck implements Flyable, Quackable {
-	
+
 	public void display() {
 		System.out.println("MallardDuck display");
 	}

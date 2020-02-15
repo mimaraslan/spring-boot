@@ -18,4 +18,3 @@ public abstract class Duck {
 		System.out.println("Duck fly");
 	}
 }
-
