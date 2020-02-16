@@ -20,7 +20,7 @@ public class _013_JSONtoRDD2_Multiline {
                 .master("local[2]")
                 .getOrCreate();
 
-        String jsonPath = "data/rdd/input/employees1.json";
+        String jsonPath = "data/rdd/input/mytest1.json";
 
         // read list to RDD
         JavaRDD<Row> items = spark.read().format("json").option("multiline", true).json(jsonPath).toJavaRDD();

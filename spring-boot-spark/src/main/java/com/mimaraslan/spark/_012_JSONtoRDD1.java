@@ -15,7 +15,7 @@ public class _012_JSONtoRDD1 {
                 .getOrCreate();
 
         // read list to RDD
-        String jsonPath = "data/rdd/input/employees1.json";
+        String jsonPath = "data/rdd/input/mytest1.json";
         JavaRDD<Row> items = spark.read().json(jsonPath).toJavaRDD();
 
         items.foreach(item -> {
