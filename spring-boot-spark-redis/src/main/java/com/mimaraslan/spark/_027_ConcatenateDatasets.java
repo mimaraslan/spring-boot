@@ -15,21 +15,21 @@ public class _027_ConcatenateDatasets {
                 .master("local[2]")
                 .getOrCreate();
 
-        Dataset<Row> ds1 = spark.read().format("json").option("multiline", true).json("data/rdd/input/employees1.json");
-        Dataset<Row> ds2 = spark.read().format("json").option("multiline", true).json("data/rdd/input/employees2.json");
+		Dataset<Row> ds1 = spark.read().format("json").option("multiline", true).json("data/rdd/input/mytest1.json");
+		Dataset<Row> ds2 = spark.read().format("json").option("multiline", true).json("data/rdd/input/mytest2.json");
 
-        // print dataset
-        System.out.println("Dataset 1\n==============");
-        ds1.show();
-        System.out.println("Dataset 2\n==============");
-        ds2.show();
+		// print dataset
+		System.out.println("Dataset 1\n==============");
+		ds1.show();
+		System.out.println("Dataset 2\n==============");
+		ds2.show();
 
-        // concatenate datasets
-        Dataset<Row> ds3 = ds1.union(ds2);
+		// concatenate datasets
+		Dataset<Row> ds3 = ds1.union(ds2);
 
-        System.out.println("Dataset 3 = Dataset 1 + Dataset 2\n==============================");
-        ds3.show();
+		System.out.println("Dataset 3 = Dataset 1 + Dataset 2\n==============================");
+		ds3.show();
 
-        spark.stop();
+		spark.stop();
     }
 }

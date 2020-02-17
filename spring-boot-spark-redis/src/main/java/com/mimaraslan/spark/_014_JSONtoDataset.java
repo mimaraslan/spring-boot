@@ -20,7 +20,7 @@ public class _014_JSONtoDataset {
                 .master("local[2]")
                 .getOrCreate();
 
-        String jsonPath = "data/rdd/input/employees1.json";
+        String jsonPath = "data/rdd/input/mytest1.json";
 
         // read list to Dataset
         Dataset<Row> df = spark.read()

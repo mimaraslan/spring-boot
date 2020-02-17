@@ -16,7 +16,7 @@ public class _026_DatasetAddColumn {
                 .master("local[2]")
                 .getOrCreate();
 
-        String jsonPath = "data/rdd/input/employees1.json";
+        String jsonPath = "data/rdd/input/mytest1.json";
 
         Dataset<Row> ds = spark.read()
                 .format("json")

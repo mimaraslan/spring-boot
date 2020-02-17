@@ -19,6 +19,8 @@ public class _002_SparkTest2_count {
         JavaRDD<String> rdd = sc.parallelize(data);
         System.out.println("Count : " + rdd.count());
         System.out.println("First : " + rdd.first());
+        System.out.println("Take : " + rdd.take(3));
+
         sc.close();
     }
 }

@@ -24,7 +24,7 @@ public class _025_WriteDataSetToJSON {
                 .getOrCreate();
 
         Encoder<Employee> employeeEncoder = Encoders.bean(Employee.class);
-        String jsonPath = "data/rdd/input/employees1.json";
+        String jsonPath = "data/rdd/input/mytest1.json";
 
         Dataset<Employee> ds = spark.read()
                 .format("json")

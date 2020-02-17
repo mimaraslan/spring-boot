@@ -27,7 +27,7 @@ public class _024_JSONtoDataSet {
         // Java Bean (data class) used to apply schema to JSON data
         Encoder<Employee> employeeEncoder = Encoders.bean(Employee.class);
 
-        String jsonPath = "data/rdd/input/employees1.json";
+        String jsonPath = "data/rdd/input/mytest1.json";
 
         // read JSON file to Dataset
         Dataset<Employee> ds = spark.read()
