@@ -32,6 +32,6 @@ public class _025_WriteDataSetToJSON {
                 .json(jsonPath).as(employeeEncoder);
 
         // write dataset to JSON file
-        ds.write().json("data/rdd/output/out_employees/");
+        ds.write().json("data/rdd/output/out_result/");
     }
 }

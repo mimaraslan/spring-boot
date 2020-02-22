@@ -16,10 +16,9 @@ public class _003_SparkTest3 {
 		//	JavaSparkContext sc = new JavaSparkContext(conf);
 		JavaSparkContext sc = new JavaSparkContext("local", "Count files");
 
-		String directory = System.getProperty("user.home");
-
-		//	String fileName = "data/rdd/input/mysample.txt";
-		//	String absolutePath = directory + File.separator + fileName;
+		// String directory = System.getProperty("user.home");
+		// String fileName = "data/rdd/input/mysample.txt";
+		// String absolutePath = directory + File.separator + fileName;
 
 		JavaRDD<String> textFileRDD = sc.textFile("data/rdd/input/mysample.txt");
 

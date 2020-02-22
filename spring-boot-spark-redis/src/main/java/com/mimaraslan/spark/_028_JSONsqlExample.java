@@ -19,8 +19,8 @@ public class _028_JSONsqlExample {
         Dataset<Row> people = spark.read()
         		.format("json")
         		.option("multiline", true)
-        		.json("data/rdd/input/jsonfile/mytest1.json");
-
+        		.json("data/rdd/input/employees.json");
+		
         // The inferred schema can be visualized using the printSchema() method
         System.out.println("Schema\n=======================");
         people.printSchema();
