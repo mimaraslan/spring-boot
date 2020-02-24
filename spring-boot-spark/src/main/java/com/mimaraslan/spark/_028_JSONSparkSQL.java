@@ -4,7 +4,7 @@ import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 
-public class _028_JSONsqlExample {
+public class _028_JSONSparkSQL {
 
     public static void main(String[] args) {
     	
