@@ -1,15 +1,18 @@
 package com.mimaraslan;
 
 import com.mimaraslan.model.Student;
-import com.mimaraslan.model.Subject;
+import com.mimaraslan.model.Course;
 import com.mimaraslan.repository.StudentRepository;
-import com.mimaraslan.repository.SubjectRepository;
+import com.mimaraslan.repository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 import javax.transaction.Transactional;
+
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -21,56 +24,107 @@ public class MainApplication implements CommandLineRunner {
     StudentRepository studentRepository;
 
     @Autowired
-    SubjectRepository subjectRepository;
+    CourseRepository courseRepository;
 
     public static void main(String[] args) {
         SpringApplication.run(MainApplication.class, args);
     }
-
+    
     @Transactional
     @Override
     public void run(String... arg0) throws Exception {
-        Student jack = new Student("Katerina");
-        Student peter = new Student("Anya");
+       
+    	Student student1 = new Student("Katerina");
+        Student student2 = new Student("Lena");
+        Student student3 = new Student("Anna");
+        Student student4 = new Student("Dahsa");
+        Student student5 = new Student("Raya");
 
-        Subject math = new Subject("Software");
-        Subject computer = new Subject("Hardware");
+        Course course1 = new Course("Machine Learning");
+        Course course2 = new Course("Database Systems");
+        Course course3 = new Course("Java Technologies");
 
-		/*subjectRepository.save(math);
-		subjectRepository.save(computer);*/
+		/*
+		courseRepository.save(course1);
+		courseRepository.save(course2);
+		*/
 
-        Set<Subject> subjects = new HashSet<Subject>();
-        subjects.add(math);
-        subjects.add(computer);
+        Set<Course> courses = new HashSet<Course>();
+        courses.add(course1);
+        courses.add(course2);
+        courses.add(course3);
 
-        jack.setSubjects(subjects);
-        peter.setSubjects(subjects);
+        student1.setCourses(courses);
+        student2.setCourses(courses);
+        student3.setCourses(courses);
+        student4.setCourses(courses);
+        student5.setCourses(courses);
 
-        studentRepository.save(jack);
-        studentRepository.save(peter);
+        studentRepository.save(student1);
+        studentRepository.save(student2);
+        studentRepository.save(student3);
+        studentRepository.save(student4);
+        studentRepository.save(student5);
 
+        Set<Student> studentsGoup1 = new HashSet<Student>();
+        studentsGoup1.add(student1);
+        studentsGoup1.add(student2);
+        
+        Set<Student> studentsGoup2 = new HashSet<Student>();
+        studentsGoup2.add(student3);
+        studentsGoup2.add(student4);
+        studentsGoup2.add(student5);
 
-        Set<Student> students = new HashSet<Student>();
-        students.add(jack);
-        students.add(peter);
+        course1.setStudents(studentsGoup1);
+        course2.setStudents(studentsGoup1);
+        course3.setStudents(studentsGoup2);
 
-        math.setStudents(students);
-        computer.setStudents(students);
-
-        subjectRepository.save(math);
-        subjectRepository.save(computer);
+        courseRepository.save(course1);
+        courseRepository.save(course2);
+        courseRepository.save(course3);
 
         List<Student> studentLst = studentRepository.findAll();
-        List<Subject> subLst = subjectRepository.findAll();
+        List<Course> subLst = courseRepository.findAll();
 
         System.out.println(studentLst.size());
         System.out.println(subLst.size());
-
 
         System.out.println("===================Students info:==================");
         studentLst.forEach(student->System.out.println(student.toString()));
 
         System.out.println("===================Students info:==================");
-        subLst.forEach(subject->System.out.println(subject.toString()));
+        subLst.forEach(course->System.out.println(course.toString()));
     }
+    
+    
+    // TODO - I will do it
+    /*
+    @Bean
+    public CommandLineRunner mappingDemo(StudentRepository studentRepository, CourseRepository courseRepository) {
+        return args -> {
+
+            // create a student
+            Student student = new Student("Katerina", 15, "8th");
+
+            // save the student
+            studentRepository.save(student);
+
+            // create three courses
+            Course course1 = new Course("Machine Learning", "ML", 13, 900);
+            Course course2 = new Course("Database Systems", "DS", 9, 600);
+            Course course3 = new Course("Java Technologies", "JT", 11, 0);
+
+            // save courses
+            courseRepository.saveAll(Arrays.asList(course1, course2, course3));
+
+            // add courses to the student
+            student.getCourses().addAll(Arrays.asList(course1, course2, course3));
+
+            // update the student
+            studentRepository.save(student);
+        };
+    }
+    */
+    
+    
 }

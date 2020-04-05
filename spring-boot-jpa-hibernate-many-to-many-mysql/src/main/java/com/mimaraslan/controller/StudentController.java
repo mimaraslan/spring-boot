@@ -1,7 +1,6 @@
 package com.mimaraslan.controller;
 
 import com.mimaraslan.model.Student;
-import com.mimaraslan.model.Subject;
 import com.mimaraslan.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -20,19 +19,16 @@ public class StudentController {
     @Autowired
     StudentRepository studentRepository;
 
-    // http://localhost:8080/api/v1/students
+    // http://localhost:8082/api/v1/students
     @GetMapping("/students")
     public List<Student> getBookAll() {
         return studentRepository.findAll();
     }
 
-
-    // http://localhost:8080/api/v1/students/1
+    // http://localhost:8082/api/v1/students/1
     @GetMapping("/students/{id}")
     public ResponseEntity<Optional<Student>> getUserFindById(@PathVariable("id") Integer id) {
         Optional<Student> student = studentRepository.findById(id);
         return ResponseEntity.ok().body(student);
-
     }
-
 }

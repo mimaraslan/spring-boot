@@ -12,7 +12,7 @@
     <artifactId>spring-boot-jpa-hibernate-many-to-many-mysql</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-jpa-hibernate-many-to-many-mysql</name>
-    <description>Spring Boot JPA Hibernate Many to Many</description>
+    <description>Spring Boot JPA Many to Many Hibernate N+1 Queries Problem</description>
 
     <properties>
         <java.version>1.8</java.version>
