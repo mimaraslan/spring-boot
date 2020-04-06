@@ -9,10 +9,10 @@
         <relativePath/> 
     </parent>
     <groupId>com.mimaraslan</groupId>
-    <artifactId>spring-boot-jpa-hibernate-many-to-many-mysql</artifactId>
+    <artifactId>spring-boot-jpa-hibernate-many-to-many</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-jpa-hibernate-many-to-many-mysql</name>
-    <description>Spring Boot JPA Many to Many Hibernate N+1 Queries Problem</description>
+    <name>spring-boot-jpa-hibernate-many-to-many</name>
+    <description>Spring Boot JPA Many to Many - Hibernate N+1 Queries Problem</description>
 
     <properties>
         <java.version>1.8</java.version>
