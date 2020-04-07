@@ -21,14 +21,14 @@ public class CourseController {
 
     // http://localhost:8082/api/v1/courses
     @GetMapping("/courses")
-    public List<Course> getBookAll() {
+    public List<Course> getCoursesAll() {
         return courseRepository.findAll();
     }
 
 
     // http://localhost:8082/api/v1/courses/1
     @GetMapping("/courses/{id}")
-    public ResponseEntity<Optional<Course>> getUserFindById(@PathVariable("id") Integer id) {
+    public ResponseEntity<Optional<Course>> getCourseFindById(@PathVariable("id") Integer id) {
         Optional<Course> course = courseRepository.findById(id);
         return ResponseEntity.ok().body(course);
     }

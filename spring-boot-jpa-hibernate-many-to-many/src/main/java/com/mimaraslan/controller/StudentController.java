@@ -21,13 +21,13 @@ public class StudentController {
 
     // http://localhost:8082/api/v1/students
     @GetMapping("/students")
-    public List<Student> getBookAll() {
+    public List<Student> getStudentsAll() {
         return studentRepository.findAll();
     }
 
     // http://localhost:8082/api/v1/students/1
     @GetMapping("/students/{id}")
-    public ResponseEntity<Optional<Student>> getUserFindById(@PathVariable("id") Integer id) {
+    public ResponseEntity<Optional<Student>> getStudentFindById(@PathVariable("id") Integer id) {
         Optional<Student> student = studentRepository.findById(id);
         return ResponseEntity.ok().body(student);
     }
