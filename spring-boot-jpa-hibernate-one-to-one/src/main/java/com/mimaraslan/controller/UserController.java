@@ -16,19 +16,19 @@ import java.util.Optional;
 @RequestMapping("/api/v1")
 public class UserController {
 
-    @Autowired
-    UserRepository userRepository;
+	@Autowired
+	UserRepository userRepository;
 
-    // http://localhost:8082/api/v1/users
-    @GetMapping("/users")
-    public List<User> getUsersAll() {
-        return userRepository.findAll();
-    }
+	// http://localhost:8082/api/v1/users
+	@GetMapping("/users")
+	public List<User> getUsersAll() {
+		return userRepository.findAll();
+	}
 
-    // http://localhost:8082/api/v1/users/1
-    @GetMapping("/users/{id}")
-    public ResponseEntity<Optional<User>> getUserFindById(@PathVariable("id") Long id) {
-        Optional<User> user = userRepository.findById(id);
-        return ResponseEntity.ok().body(user);
-    }
+	// http://localhost:8082/api/v1/users/1
+	@GetMapping("/users/{id}")
+	public ResponseEntity<Optional<User>> getUserFindById(@PathVariable("id") Long id) {
+		Optional<User> user = userRepository.findById(id);
+		return ResponseEntity.ok().body(user);
+	}
 }

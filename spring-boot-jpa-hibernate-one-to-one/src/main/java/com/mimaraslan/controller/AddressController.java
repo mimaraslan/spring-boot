@@ -16,19 +16,19 @@ import java.util.Optional;
 @RequestMapping("/api/v1")
 public class AddressController {
 
-    @Autowired
-    AddressRepository addressRepository;
+	@Autowired
+	AddressRepository addressRepository;
 
-    // http://localhost:8082/api/v1/address
-    @GetMapping("/address")
-    public List<Address> getAddresssAll() {
-        return addressRepository.findAll();
-    }
+	// http://localhost:8082/api/v1/address
+	@GetMapping("/address")
+	public List<Address> getAddresssAll() {
+		return addressRepository.findAll();
+	}
 
-    // http://localhost:8082/api/v1/address/1
-    @GetMapping("/address/{id}")
-    public ResponseEntity<Optional<Address>> getAddressFindById(@PathVariable("id") Long id) {
-        Optional<Address> address = addressRepository.findById(id);
-        return ResponseEntity.ok().body(address);
-    }
+	// http://localhost:8082/api/v1/address/1
+	@GetMapping("/address/{id}")
+	public ResponseEntity<Optional<Address>> getAddressFindById(@PathVariable("id") Long id) {
+		Optional<Address> address = addressRepository.findById(id);
+		return ResponseEntity.ok().body(address);
+	}
 }
