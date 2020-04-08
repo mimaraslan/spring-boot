@@ -110,9 +110,4 @@ public class Book implements Serializable {
                 ", isbn='" + isbn + '\'' +
                 '}';
     }
-
-	public Object setBookCategory(BookCategory bookCategory) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }

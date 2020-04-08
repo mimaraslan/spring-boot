@@ -1,8 +1,5 @@
 package com.mimaraslan;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,46 +14,44 @@ import com.mimaraslan.repository.PageRepository;
 
 @SpringBootApplication
 public class MainApplication {
-	
-    public static void main(String[] args) {
-        SpringApplication.run(MainApplication.class, args);
-    }
-    
-    @Bean
-    public CommandLineRunner mappingDemo(BookCategoryRepository bookCategoryRepository,
-    									 BookRepository bookRepository, 
-    									 PageRepository pageRepository) {
-        return args -> {
-       
-            BookCategory bookCategory1 = new BookCategory("Object Oriented Programming");
-            bookCategoryRepository.save(bookCategory1);
-            
-            BookCategory bookCategory2 = new BookCategory("Functional Programming");
-            bookCategoryRepository.save(bookCategory2);
-            
-        	// create a new book
-            Book book1 = new Book("Java 101", "Katerina Lena", "123456", bookCategory1);
 
-            // save the book
-            bookRepository.save(book1);
+	public static void main(String[] args) {
+		SpringApplication.run(MainApplication.class, args);
+	}
 
-            // create and save new pages
-            pageRepository.save(new Page(1, "Introduction contents", "Introduction", book1));
-            pageRepository.save(new Page(14, "Java contents", "Java", book1));
-            pageRepository.save(new Page(53, "Concurrency contents", "Concurrency", book1));
-            
-            
-            // create a new book
-            Book book2 = new Book("Scala 101", "Yulya Rita", "987654", bookCategory2);
+	@Bean
+	public CommandLineRunner mappingDemo(BookCategoryRepository bookCategoryRepository, BookRepository bookRepository,
+			PageRepository pageRepository) {
+		return args -> {
 
-            // save the book
-            bookRepository.save(book2);
+			BookCategory bookCategory1 = new BookCategory("Object Oriented Programming");
+			bookCategoryRepository.save(bookCategory1);
 
-            // create and save new pages
-            pageRepository.save(new Page(1, "PART 1", "Scala", book2));
-            pageRepository.save(new Page(20, "PART 2", "Play", book2));
-            pageRepository.save(new Page(60, "PART 3", "Akka", book2));
+			BookCategory bookCategory2 = new BookCategory("Functional Programming");
+			bookCategoryRepository.save(bookCategory2);
 
-        };
-    }
+			// create a new book
+			Book book1 = new Book("Java 101", "Katerina Lena", "123456", bookCategory1);
+
+			// save the book
+			bookRepository.save(book1);
+
+			// create and save new pages
+			pageRepository.save(new Page(1, "Introduction contents", "Introduction", book1));
+			pageRepository.save(new Page(14, "Java contents", "Java", book1));
+			pageRepository.save(new Page(53, "Concurrency contents", "Concurrency", book1));
+
+			// create a new book
+			Book book2 = new Book("Scala 101", "Yulya Rita", "987654", bookCategory2);
+
+			// save the book
+			bookRepository.save(book2);
+
+			// create and save new pages
+			pageRepository.save(new Page(1, "PART 1", "Scala", book2));
+			pageRepository.save(new Page(20, "PART 2", "Play", book2));
+			pageRepository.save(new Page(60, "PART 3", "Akka", book2));
+
+		};
+	}
 }

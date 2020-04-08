@@ -6,5 +6,4 @@ import com.mimaraslan.model.BookCategory;
 
 public interface BookCategoryRepository extends JpaRepository<BookCategory, Long> {
 
-		
 }

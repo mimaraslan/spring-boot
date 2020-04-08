@@ -55,5 +55,4 @@ public class BookCategory {
 	public String toString() {
 		return "BookCategory [id=" + id + ", name=" + name + ", books=" + books + "]";
 	}
-
 }
