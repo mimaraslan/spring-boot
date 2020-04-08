@@ -31,15 +31,15 @@ public class MainApplication {
 			bookCategoryRepository.save(bookCategory2);
 
 			// create a new book
-			Book book1 = new Book("Java 101", "Katerina Lena", "123456", bookCategory1);
+			Book book1 = new Book("Java EE", "Katerina Lena", "123456", bookCategory1);
 
 			// save the book
 			bookRepository.save(book1);
 
 			// create and save new pages
-			pageRepository.save(new Page(1, "Introduction contents", "Introduction", book1));
-			pageRepository.save(new Page(14, "Java contents", "Java", book1));
-			pageRepository.save(new Page(53, "Concurrency contents", "Concurrency", book1));
+			pageRepository.save(new Page(1, "Java 101", "Java Level 1", book1));
+			pageRepository.save(new Page(14, "Java 102", "Java Level 2", book1));
+			pageRepository.save(new Page(53, "Java 103", "Java Level 3", book1));
 
 			// create a new book
 			Book book2 = new Book("Scala 101", "Yulya Rita", "987654", bookCategory2);

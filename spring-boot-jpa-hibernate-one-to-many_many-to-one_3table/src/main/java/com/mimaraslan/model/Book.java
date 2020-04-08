@@ -26,8 +26,8 @@ public class Book implements Serializable {
 
 	@ManyToOne
 	@JoinColumn(name = "book_category_id", nullable = false)
-    private BookCategory bookCategory;
-	
+	private BookCategory bookCategory;
+
 	@JsonIgnoreProperties("book") // for Hibernate N+1 Queries Problem
 	@OneToMany(mappedBy = "book", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private Set<Page> pages;
@@ -36,9 +36,9 @@ public class Book implements Serializable {
 	}
 
 	public Book(String title) {
-        this.title = title;
-    }
-	
+		this.title = title;
+	}
+
 	public Book(String title, String author, String isbn, BookCategory bookCategory) {
 		this.title = title;
 		this.author = author;

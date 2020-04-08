@@ -16,7 +16,7 @@ public class BookCategory {
 
 	private String name;
 
-	@JsonIgnoreProperties("bookCategory")
+	@JsonIgnoreProperties("bookCategory") // for Hibernate N+1 Queries Problem
 	@OneToMany(mappedBy = "bookCategory", cascade = CascadeType.ALL)
 	private Set<Book> books;
 
