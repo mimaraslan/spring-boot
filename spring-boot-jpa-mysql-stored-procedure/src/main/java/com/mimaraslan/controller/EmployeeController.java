@@ -23,7 +23,7 @@ public class EmployeeController {
 	 * Method to fetch all employees from the db.
 	 * @return
 	 */
-	// http://localhost:8002/api/employee/all
+	// http://localhost:8082/api/employee/all
 	@GetMapping(value= "/all")
 	public Iterable<Employee> getAll() {
 		logger.debug("Get all employees.");
@@ -35,7 +35,7 @@ public class EmployeeController {
 	 * @param department
 	 * @return
 	 */
-	// http://localhost:8002/api/employee/department/Technology
+	// http://localhost:8082/api/employee/department/Software
 	@GetMapping(value= "/department/{department}")
 	public Iterable<Employee> getEmployeesByDepartment(@PathVariable(name= "department") String department) {
 		logger.debug("Getting count for department= {}.", department);
@@ -47,7 +47,7 @@ public class EmployeeController {
 	 * @param position
 	 * @return
 	 */
-	// http://localhost:8002/api/employee/count/Lead
+	// http://localhost:8082/api/employee/count/Lead
 	@GetMapping(value= "/count/{position}")
 	public Integer getEmployeeCountByPosition(@PathVariable(name= "position") String position) {
 		logger.debug("Getting count for employee positions= {}.", position);

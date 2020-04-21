@@ -33,8 +33,9 @@ public class EmployeeRepository {
 
 	/**
 	 * Method to fetch the employees count on the basis of position.
-	 * @param input
-	 * @return
+	 * @param input emp_position
+	 * @param output position_count
+	 * @return Integer
 	 */
 	public Integer getEmployeesCountByPosition(String input) {
 		return (Integer) em.createNamedStoredProcedureQuery("my-procedure-3").setParameter("emp_position", input).getOutputParameterValue("position_count");
