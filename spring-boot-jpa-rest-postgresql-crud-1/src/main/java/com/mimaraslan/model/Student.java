@@ -1,6 +1,7 @@
 package com.mimaraslan.model;
 
 import java.util.Date;
+import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
@@ -10,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.Size;
+
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
@@ -17,12 +20,14 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 @Entity
-@Table(name = "users")
+@Table(name = "students")
 @EntityListeners(AuditingEntityListener.class)
-public class User {
+public class Student {
 
 	private long id;
 	private String firstName;
+
+	@Size(min=5, message="Name must be at least 5 characters long")
 	private String lastName;
 	private String emailId;
 	private Date createdAt;
@@ -99,6 +104,21 @@ public class User {
 	}
 	public void setUpdatedBy(String updatedBy) {
 		this.updatedBy = updatedBy;
+	}
+
+
+	@Override
+	public String toString() {
+		return "User {" +
+				"id=" + id +
+				", firstName='" + firstName + '\'' +
+				", lastName='" + lastName + '\'' +
+				", emailId='" + emailId + '\'' +
+				", createdAt=" + createdAt +
+				", createdBy='" + createdBy + '\'' +
+				", updatedAt=" + updatedAt +
+				", updatedBy='" + updatedBy + '\'' +
+				'}';
 	}
 
 }

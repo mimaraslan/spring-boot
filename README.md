@@ -1,2 +1,2 @@
-# Spring Boot
-Spring Boot Projects
+# Spring Boot - Demo Projects
+Spring Boot - Demo Projects
