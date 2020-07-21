@@ -14,7 +14,7 @@ public class EmployeeController {
 
 	@Autowired
 	private EmployeeRepository employeeRepository;
-	
+
 	// http://localhost:8080/employees
 	@GetMapping("/employees")
 	public List<Employee> getAllEmployees() {
