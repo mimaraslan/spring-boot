@@ -26,10 +26,10 @@ public class TransactionController {
 	@Autowired
 	TransactionService transactionService;
 
-	// http://localhost:8089
+	// http://localhost:8085
     @GetMapping
     public String testDemo(){
-        return "LOLO 8089 Docker App Running....!";
+        return "Docker App Running....!";
     }
     
 	@PostMapping("/create")
@@ -54,7 +54,7 @@ public class TransactionController {
 	}
 	
 	
-	// http://localhost:8080/view/1
+	// http://localhost:8085/view/1
 	@PutMapping("/view/{id}")
 	public ResponseEntity<Transaction> updateUser(
 			@PathVariable(value = "id") Long transactionId,
@@ -67,7 +67,7 @@ public class TransactionController {
 		return ResponseEntity.ok(updatedUser);
 	}
 
-	// http://localhost:8080/view/1
+	// http://localhost:8085/view/1
 	@DeleteMapping("/view/{id}")
 	public Map<String, Boolean> deleteUser(@PathVariable(value = "id") Long transactionId) throws ResourceNotFoundException {
 		Transaction transaction = transactionService.getTransaction(transactionId).orElseThrow(() -> new ResourceNotFoundException("User not found :: " + transactionId));
@@ -76,6 +76,5 @@ public class TransactionController {
 		response.put("Deleted", Boolean.TRUE);
 		return response;
 	}
-	
 	
 }

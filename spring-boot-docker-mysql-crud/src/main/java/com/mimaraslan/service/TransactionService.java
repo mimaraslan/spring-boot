@@ -30,6 +30,6 @@ public class TransactionService {
 	}
 
 	public void deleteTransaction(Transaction transaction) {
-		 transactionRepository.delete(transaction);
+		transactionRepository.delete(transaction);
 	}
 }
