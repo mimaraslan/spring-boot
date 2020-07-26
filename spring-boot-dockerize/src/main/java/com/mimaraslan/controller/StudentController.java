@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Mimar Aslan
  */
 @RestController
-@RequestMapping
-public class DockerDemoController {
-
-	// http://localhost:8085/test
-	@GetMapping("test")
-	public String testDemo() {
-		return "Docker App Running....!";
-	}
+@RequestMapping("/api/v1")
+public class StudentController {
+	
+	// http://localhost:8085/api/v1/message
+		@GetMapping("/message")
+		public String getMessage() {
+			return "Welcome to Spring Boot with Docker App Running!";
+		}
 }

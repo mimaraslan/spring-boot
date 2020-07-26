@@ -8,11 +8,11 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.mimaraslan.controller.MyMath;
+import com.mimaraslan.controller.Lesson;
 
 
-public class MaintApplicationTests {
-	MyMath myMath = new MyMath();
+public class DockerDemoAppTests {
+	Lesson myMath = new Lesson();
 
 	public void testAdd() {
 		String str = "Junit is working fine";

@@ -1,6 +1,7 @@
 package com.mimaraslan.controller;
 
-public class MyMath {
+public class Lesson {
+	
 	public int sum(int[] numbers) {
 		int sum = 0;
 		for (int i : numbers) {
@@ -8,4 +9,5 @@ public class MyMath {
 		}
 		return sum;
 	}
+	
 }

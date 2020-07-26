@@ -8,12 +8,12 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.mimaraslan.controller.MyMath;
+import com.mimaraslan.controller.Lesson;
 
-public class MyMathTest {
-	MyMath myMath = new MyMath();
+public class LessonTest {
+	Lesson myMath = new Lesson();
 
-	// MyMath.sum
+	// LeessonTest.sum
 	// 1,2,3 => 6
 	@Test
 	public void sum_with3numbers() {

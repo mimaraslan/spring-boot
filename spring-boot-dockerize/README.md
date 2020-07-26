@@ -10,18 +10,16 @@ Running Spring Boot Project on Docker
 ![Running Spring Boot Project on Docker](src/main/resources/images/03.jpg)
 
 <hr>
-GET <br>
+HTTP request method type: GET <br>
 http://localhost:8085/api/v1/message
 
 
 <hr>
-GET <br>
-http://localhost:8085/test
-
-<hr>
-TERMINAL <br>
+OPEN A TERMINAL <br>
 cd /Users/mimaraslan/Documents/workspace/spring-boot/spring-boot-dockerize/
 
+
 mvn install dockerfile:build
+
 
 docker run -p 8085:8085 -t mimaraslan/spring-boot-dockerize
