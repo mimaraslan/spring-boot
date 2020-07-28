@@ -13,7 +13,6 @@ Running Spring Boot Project on Docker
 HTTP request method type: GET <br>
 http://localhost:8085/api/v1/message
 
-
 <hr>
 OPEN A TERMINAL <br>
 cd /Users/mimaraslan/Documents/workspace/spring-boot/spring-boot-dockerize/

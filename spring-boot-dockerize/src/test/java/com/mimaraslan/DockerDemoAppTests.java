@@ -10,9 +10,9 @@ import org.junit.Test;
 
 import com.mimaraslan.controller.Lesson;
 
-
 public class DockerDemoAppTests {
-	Lesson myMath = new Lesson();
+	
+	Lesson lesson = new Lesson();
 
 	public void testAdd() {
 		String str = "Junit is working fine";
@@ -39,18 +39,15 @@ public class DockerDemoAppTests {
 		System.out.println("After Class");
 	}
 
-	// MyMath.sum
-	// 1,2,3 => 6
 	@Test
 	public void sum_with3numbers() {
 		System.out.println("Test1");
-		assertEquals(6, myMath.sum(new int[] { 1, 2, 3 }));
+		assertEquals(6, lesson.getSum(new int[] { 1, 2, 3 }));
 	}
 
 	@Test
 	public void sum_with1number() {
 		System.out.println("Test2");
-		assertEquals(3, myMath.sum(new int[] { 3 }));
+		assertEquals(3, lesson.getSum(new int[] { 3 }));
 	}
 }
-
