@@ -1,4 +1,4 @@
-package com.mimaraslan.com.mimaraslan.model;
+package com.mimaraslan.model;
 
 import lombok.*;
 import javax.persistence.*;
