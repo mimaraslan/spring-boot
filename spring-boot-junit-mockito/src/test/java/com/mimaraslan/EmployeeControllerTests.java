@@ -116,9 +116,9 @@ public class EmployeeControllerTests {
         // given - precondition or setup
         long employeeId = 1L;
         Employee employee = Employee.builder()
-                .firstName("Ramesh")
-                .lastName("Fadatare")
-                .email("ramesh@gmail.com")
+                .firstName("Lolo")
+                .lastName("Karamba")
+                .email("lolo.karamba@gmail.com")
                 .build();
         given(employeeService.getEmployeeById(employeeId)).willReturn(Optional.empty());
 
