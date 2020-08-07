@@ -23,6 +23,8 @@ pom.xml.versionsBackup
 pom.xml.next
 release.properties
 .mvn/*
+.mvn/wrapper/*
+mvnw
 
 ### Eclipse ###
 .metadata
