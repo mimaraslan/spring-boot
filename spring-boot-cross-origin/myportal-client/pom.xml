@@ -8,7 +8,7 @@
 		<version>2.1.4.RELEASE</version>
 		<relativePath/> 
 	</parent>
-	<groupId>com.turkeyjug</groupId>
+	<groupId>com.mimaraslan</groupId>
 	<artifactId>myportal-client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>myportal-client</name>
