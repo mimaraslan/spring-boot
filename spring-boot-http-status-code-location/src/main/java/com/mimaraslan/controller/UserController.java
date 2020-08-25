@@ -29,9 +29,11 @@ public class UserController {
 	}
 	
 	@GetMapping("/users/{id}")
-	public User retrieveUser(@PathVariable int id){
+	public User retrieveUserV1(@PathVariable int id){
 		return userService.findOne(id);
 	}
+	
+	
 	
 	
 	@PostMapping("/users/v1")

@@ -1,10 +1,10 @@
-package com.mimaraslan.controller;
+package com.mimaraslan.model;
 
-public class HelloWorldBean {
+public class HelloWorld {
 
 	private String message;
 
-	public HelloWorldBean(String message) {
+	public HelloWorld(String message) {
 		this.setMessage(message);
 	}
 

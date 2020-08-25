@@ -4,22 +4,24 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.mimaraslan.model.HelloWorld;
+
 @RestController
 public class HelloWorldController {
 
 
-	@GetMapping("/hello-world")
-	public String helloWorld() {
-		return "Hello World";
+	@GetMapping("/hi")
+	public String hi() {
+		return "Hi";
 	}
 	
-	@GetMapping("/hello-world-bean")
-	public HelloWorldBean helloWorldBean() {
-		return new HelloWorldBean ("Hello World");
+	@GetMapping("/hello")
+	public HelloWorld helloWorld() {
+		return new HelloWorld ("Hello");
 	}
 	
-	@GetMapping("/hello-world/path-variable/{name}")
-	public HelloWorldBean helloWorldBean(@PathVariable String name) {
-		return new HelloWorldBean ("Hello World " + name);
+	@GetMapping("/hello/{name}")
+	public HelloWorld helloWorld(@PathVariable String name) {
+		return new HelloWorld ("Hello " + name);
 	}
 }
