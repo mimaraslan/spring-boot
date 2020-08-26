@@ -5,12 +5,11 @@ import java.util.Date;
 public class User {
 
 	private Integer id;
-	
+
 	private String name;
-	
+
 	private Date birthDate;
 
-	
 	public User(Integer id, String name, Date birthDate) {
 		super();
 		this.id = id;
@@ -46,6 +45,5 @@ public class User {
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", birthDate=" + birthDate + "]";
 	}
-	
-	
+
 }

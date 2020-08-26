@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -19,41 +18,36 @@ import com.mimaraslan.service.UserService;
 @RestController
 public class UserController {
 
-	
 	@Autowired
 	private UserService userService;
-	
+
 	@GetMapping("/users")
-	public List<User> retrieveAllUsers(){
+	public List<User> retrieveAllUsers() {
 		return userService.findAll();
 	}
-	
+
 	@GetMapping("/users/{id}")
-	public User retrieveUserV1(@PathVariable int id){
+	public User retrieveUserV1(@PathVariable int id) {
 		return userService.findOne(id);
 	}
-	
-	
-	
-	
+
 	@PostMapping("/users/v1")
-	public User createUserV1(@RequestBody User user){
+	public User createUserV1(@RequestBody User user) {
 		User savedUser = userService.save(user);
 		return savedUser;
 	}
-	
-	
+
 	@PostMapping("/users")
-	public ResponseEntity<Object> createUser(@RequestBody User user){
+	public ResponseEntity<Object> createUser(@RequestBody User user) {
 		User savedUser = userService.save(user);
-		
+
 		URI location = ServletUriComponentsBuilder
-				.fromCurrentRequest()
-				.path("/{id}")
-				.buildAndExpand(savedUser.getId()).toUri();
-				
+				.fromCurrentRequest().path("/{id}")
+				.buildAndExpand(savedUser.getId())
+				.toUri();
+
 		return ResponseEntity.created(location).build();
-	
+
 	}
-	
+
 }
