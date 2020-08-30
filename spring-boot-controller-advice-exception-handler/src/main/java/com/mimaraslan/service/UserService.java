@@ -35,11 +35,22 @@ public class UserService {
 	}
 
 	public User findOne(int id) {
-
 		for (User user : users) {
 			if (user.getId() == id)
 
 				return user;
+		}
+		return null;
+	}
+
+	public User deleteById(int id) {
+		Iterator<User> iterator = users.iterator();
+		while (iterator.hasNext()) {
+			User user = iterator.next();
+			if (user.getId() == id) {
+				iterator.remove();
+				return user;
+			}
 		}
 		return null;
 	}
