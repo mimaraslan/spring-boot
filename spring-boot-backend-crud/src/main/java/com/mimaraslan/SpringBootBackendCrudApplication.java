@@ -14,7 +14,6 @@ public class SpringBootBackendCrudApplication implements CommandLineRunner {
 		SpringApplication.run(SpringBootBackendCrudApplication.class, args);
 	}
 
-
 	@Autowired
 	private EmployeeRepository employeeRepository;
 
