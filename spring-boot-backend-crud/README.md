@@ -17,8 +17,11 @@ http://localhost:8082/api/v1//api/v1/employees
 OPEN A TERMINAL <br>
 cd /Users/mimaraslan/Documents/workspace/spring-boot/spring-boot-backend-crud/
 
+<hr>
+docker build -t spring-boot-backend-crud:latest . 
 
-mvn install dockerfile:build
+<hr>
+docker images
 
-
-docker run -p 8082:8082 -t mimaraslan/spring-boot-backend-crud
+<hr>
+docker run -p 8082:8082 -t spring-boot-backend-crud --link mysql-standalone:mysql spring-boot-backend-crud 
