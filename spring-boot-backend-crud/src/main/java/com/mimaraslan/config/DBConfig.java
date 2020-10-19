@@ -5,9 +5,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-@Configuration
+//@Configuration
 public class DBConfig {
-
+/*
     @Value("${myinfo}")
     private String myinfo;
 
@@ -17,4 +17,5 @@ public class DBConfig {
         System.out.println("My info: "+ myinfo);
         return "Source connection for dev";
     }
+    */
 }

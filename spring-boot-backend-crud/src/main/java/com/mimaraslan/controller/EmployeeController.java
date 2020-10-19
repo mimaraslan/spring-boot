@@ -20,8 +20,8 @@ public class EmployeeController {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    @Autowired
-    private DBConfig dbConfig;
+   // @Autowired
+   // private DBConfig dbConfig;
 
     // LIST
     @GetMapping
