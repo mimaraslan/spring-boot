@@ -8,7 +8,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootBackendCrudApplication implements CommandLineRunner {
+//public class SpringBootBackendCrudApplication implements CommandLineRunner {
+public class SpringBootBackendCrudApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootBackendCrudApplication.class, args);
@@ -16,7 +17,7 @@ public class SpringBootBackendCrudApplication implements CommandLineRunner {
 
 	@Autowired
 	private EmployeeRepository employeeRepository;
-
+/*
 	@Override
 	public void run(String... args) throws Exception {
 		Employee employee = new Employee();
@@ -32,4 +33,5 @@ public class SpringBootBackendCrudApplication implements CommandLineRunner {
 		employeeRepository.save(employee2);
 
 	}
+	*/
 }
