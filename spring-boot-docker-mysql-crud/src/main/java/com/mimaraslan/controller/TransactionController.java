@@ -31,7 +31,8 @@ public class TransactionController {
     public String testDemo(){
         return "Docker App Running....!";
     }
-    
+
+	// http://localhost:8085/crate
 	@PostMapping("/create")
 	public Long createTransaction(@RequestBody Transaction transaction) {
 		transactionService.saveTransaction(transaction);
