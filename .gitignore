@@ -114,3 +114,15 @@ typings
 .node_repl_history
 spring-boot-jpa-hibernate-rest-crud-postgresql/mvnw
 spring-boot-jpa-rest-sample-crud/mvnw
+
+spring-boot-jpa-rest-hateoas/mvnw
+
+spring-boot-jpa-rest-hateoas/.mvn/wrapper/maven-wrapper.properties
+
+spring-boot-jpa-rest-hateoas/.mvn/wrapper/
+
+spring-boot-docker-rest/mvnw
+
+spring-boot-docker-rest/.mvn/wrapper/maven-wrapper.properties
+
+spring-boot-rest-hateoas/mvnw
