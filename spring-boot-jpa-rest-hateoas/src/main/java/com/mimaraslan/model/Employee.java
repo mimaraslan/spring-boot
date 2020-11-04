@@ -1,49 +1,31 @@
 package com.mimaraslan.model;
 
+import lombok.*;
+import javax.persistence.*;
 import java.util.Date;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "employees")
 public class Employee {
 
-	private Integer id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
 
-	private String name;
+	@Column(name = "first_name")
+	private String firstName;
 
+	@Column(name = "last_name")
+	private String lastName;
+
+	@Column(name = "email_id")
+	private String emailId;
+
+	@Column(name = "birth_date")
 	private Date birthDate;
-
-	public Employee(Integer id, String name, Date birthDate) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.birthDate = birthDate;
-	}
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public Date getBirthDate() {
-		return birthDate;
-	}
-
-	public void setBirthDate(Date birthDate) {
-		this.birthDate = birthDate;
-	}
-
-	@Override
-	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", birthDate=" + birthDate + "]";
-	}
 
 }
