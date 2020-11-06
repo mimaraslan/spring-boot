@@ -1,4 +1,4 @@
-package com.mimaraslan.execption;
+package com.mimaraslan.exception;
 
 import java.util.Date;
 
