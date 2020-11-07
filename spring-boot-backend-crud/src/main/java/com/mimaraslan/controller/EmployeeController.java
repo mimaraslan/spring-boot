@@ -5,12 +5,19 @@ import com.mimaraslan.exception.ResourceNotFoundException;
 import com.mimaraslan.model.Employee;
 import com.mimaraslan.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
+
+import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @CrossOrigin(origins = "http://localhost:3000/")
 @RestController
@@ -23,7 +30,7 @@ public class EmployeeController {
    // @Autowired
    // private DBConfig dbConfig;
 
-    // LIST
+    // LIST ALL
     @GetMapping
     public List<Employee> getAllEmployees() {
         return employeeRepository.findAll();
@@ -36,20 +43,18 @@ public class EmployeeController {
 
     // ADD
     @PostMapping
-    public Employee createEmployee (@RequestBody Employee employee){
+    public Employee createEmployee (@Valid @RequestBody Employee employee){
         return employeeRepository.save(employee);
     }
 
-
     @PostMapping("/add")
-    public ResponseEntity<Employee> createEmployee2 (@RequestBody Employee employee){
+    public ResponseEntity<Employee> createEmployee2 (@Valid @RequestBody Employee employee){
         return ResponseEntity.ok(employeeRepository.save(employee));
     }
 
     // LIST ID
     @GetMapping("{id}")
     public ResponseEntity<Employee> getEmployeeId(@PathVariable long id){
-
         Employee employee = employeeRepository.findById(id)
                 .orElseThrow(()-> new ResourceNotFoundException("Employee not exist with id: "+ id));
         return ResponseEntity.ok(employee);
@@ -64,6 +69,22 @@ public class EmployeeController {
             throw new ResourceNotFoundException("Employee not exist with id: "+ id);
         }
     }
+
+    // HATEOAS (Hypermedia as the Engine of Application State)
+    @GetMapping("/all/{id}")
+    public EntityModel<Optional<Employee>> getEmployeeId3(@PathVariable long id){
+        Optional<Employee> empObj = employeeRepository.findById(id);
+        if(empObj==null){
+            throw new ResourceNotFoundException("Employee not exist with id: "+ id);
+        }
+        EntityModel<Optional<Employee>> model = EntityModel.of(empObj);
+
+        WebMvcLinkBuilder linkToEmployees = linkTo(methodOn(this.getClass()).getAllEmployees());
+        model.add(linkToEmployees.withRel("all-emoloyees"));
+
+        return model;
+    }
+
 
     // UPDATE
     @PutMapping("{id}")
