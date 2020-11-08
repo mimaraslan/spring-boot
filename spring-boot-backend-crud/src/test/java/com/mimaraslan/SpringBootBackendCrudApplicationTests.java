@@ -2,6 +2,7 @@ package com.mimaraslan;
 
 import com.mimaraslan.model.Employee;
 import com.mimaraslan.repository.EmployeeRepository;
+
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
@@ -32,7 +33,8 @@ class SpringBootBackendCrudApplicationTests {
 	@Test
 	public void getUsersTest() {
 		when(repository.findAll()).thenReturn(Stream
-				.of(new Employee(376, "A", "B", "C"), new Employee(1, "ABC", "ccc", "UK")).collect(Collectors.toList()));
+				.of(
+                        new Employee(376, "A", "B", "C", null), new Employee(1, "ABC", "ccc", "UK", null)).collect(Collectors.toList()));
 		assertEquals(2, service.getEmployees().size());
 	}
 
@@ -48,14 +50,14 @@ class SpringBootBackendCrudApplicationTests {
 
 	@Test
 	public void saveUserTest() {
-		Employee user = new Employee(2, "m", "h", "u");
+		Employee user = new Employee(2, "m", "h", "u", null);
 		when(repository.save(user)).thenReturn(user);
 		assertEquals(user, service.addEmployee(user));
 	}
 
 	@Test
 	public void deleteUserTest() {
-		Employee user = new Employee(2, "m", "t", "k");
+		Employee user = new Employee(2, "m", "t", "k",null);
 		service.deleteEmployee(user);
 		verify(repository, times(1)).delete(user);
 	}
