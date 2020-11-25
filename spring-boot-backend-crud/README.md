@@ -1,4 +1,4 @@
-# spring-boot-dockerize
+# spring-boot-docker
 
 Spring Boot to Docker
 ![Spring Boot to Docker](src/main/resources/static/images/01.jpg)
@@ -20,10 +20,6 @@ Running Spring Boot Project on Docker
 ![Running Spring Boot Project on Docker](src/main/resources/static/images/15.jpg)
 ![Running Spring Boot Project on Docker](src/main/resources/static/images/16.jpg)
 ![Running Spring Boot Project on Docker](src/main/resources/static/images/17.jpg)
-
-
-
-
 
 <hr>
 HTTP request method type: GET <br>
