@@ -1,3 +1,25 @@
+Spring Boot to Docker
+![Spring Boot to Docker](src/main/resources/static/images/01.jpg)
+![Running Spring Boot Project on Docker](src/main/resources/static/images/02.jpg)
+![Running Spring Boot Project on Docker](src/main/resources/static/images/03.jpg)
+
+Running Spring Boot Project on Docker
+![Running Spring Boot Project on Docker](src/main/resources/static/images/04.jpg)
+![Running Spring Boot Project on Docker](src/main/resources/static/images/05.jpg)
+![Running Spring Boot Project on Docker](src/main/resources/static/images/06.jpg)
+![Running Spring Boot Project on Docker](src/main/resources/static/images/07.jpg)
+![Running Spring Boot Project on Docker](src/main/resources/static/images/08.jpg)
+![Running Spring Boot Project on Docker](src/main/resources/static/images/09.jpg)
+![Running Spring Boot Project on Docker](src/main/resources/static/images/10.jpg)
+![Running Spring Boot Project on Docker](src/main/resources/static/images/11.jpg)
+![Running Spring Boot Project on Docker](src/main/resources/static/images/12.jpg)
+![Running Spring Boot Project on Docker](src/main/resources/static/images/13.jpg)
+![Running Spring Boot Project on Docker](src/main/resources/static/images/14.jpg)
+![Running Spring Boot Project on Docker](src/main/resources/static/images/15.jpg)
+![Running Spring Boot Project on Docker](src/main/resources/static/images/16.jpg)
+![Running Spring Boot Project on Docker](src/main/resources/static/images/17.jpg)
+
+
 ## TERMINAL 1
 docker run -d -p 3306:3306 -p 33060:33060  --name mysql-standalone -e MYSQL_ROOT_PASSWORD=123456789 -e MYSQL_DATABASE=mydemodb -e MYSQL_USER=katerina  -e MYSQL_PASSWORD=123456789 -d mysql:latest
 
