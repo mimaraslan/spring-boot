@@ -4,6 +4,7 @@ import com.mimaraslan.config.DBConfig;
 import com.mimaraslan.exception.ResourceNotFoundException;
 import com.mimaraslan.model.Employee;
 import com.mimaraslan.repository.EmployeeRepository;
+import com.mimaraslan.service.EmployeeService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.tomcat.util.http.parser.AcceptLanguage;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,12 +18,15 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.net.URI;
 import java.util.List;
 import java.util.Locale;
 import java.util.Optional;
 
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
@@ -33,6 +37,9 @@ public class EmployeeController {
 
     @Autowired
     private EmployeeRepository employeeRepository;
+
+    @Autowired
+    private EmployeeService employeeService;
 
    // @Autowired
    // private DBConfig dbConfig;
@@ -54,9 +61,21 @@ public class EmployeeController {
         return employeeRepository.save(employee);
     }
 
-    @PostMapping("employees/add")
-    public ResponseEntity<Employee> createEmployee2 (@Valid @RequestBody Employee employee){
+    @PostMapping("employees/add/v2")
+    public ResponseEntity<Employee> createEmployeeV2 (@Valid @RequestBody Employee employee){
         return ResponseEntity.ok(employeeRepository.save(employee));
+    }
+
+    @PostMapping("employees/add/v3")
+    public ResponseEntity<Object> createEmployeeV3 (@Valid @RequestBody Employee employee){
+        Employee employeeObj = employeeRepository.save(employee);
+
+        URI location = ServletUriComponentsBuilder
+                .fromCurrentRequest()
+                .path("/{id}")
+                .buildAndExpand(employeeObj.getId()).toUri();
+
+        return ResponseEntity.created(location).build();
     }
 
     // LIST ID
@@ -77,7 +96,6 @@ public class EmployeeController {
         }
     }
 
-
     // HATEOAS (Hypermedia as the Engine of Application State)
     @GetMapping("employees/all/{id}")
     public EntityModel<Optional<Employee>> getEmployeeId3(@PathVariable long id){
@@ -85,11 +103,10 @@ public class EmployeeController {
         if(empObj==null){
             throw new ResourceNotFoundException("Employee not exist with id: "+ id);
         }
-        EntityModel<Optional<Employee>> model = EntityModel.of(empObj);
 
+        EntityModel<Optional<Employee>> model = EntityModel.of(empObj);
         WebMvcLinkBuilder linkToEmployees = linkTo(methodOn(this.getClass()).getAllEmployees());
         model.add(linkToEmployees.withRel("all-emoloyees"));
-
         return model;
     }
 
@@ -111,14 +128,13 @@ public class EmployeeController {
     // DELETE
     @DeleteMapping("/employees/{id}")
     public ResponseEntity<HttpStatus> deleteEmployee(@PathVariable long id){
-
         Employee employee = employeeRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id: " + id));
-
         employeeRepository.delete(employee);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-
     }
+
+    //Internationalization i18n
     @Autowired
     private MessageSource messageSource;
 

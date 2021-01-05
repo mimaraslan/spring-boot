@@ -34,7 +34,10 @@ class SpringBootBackendCrudApplicationTests {
 	public void getUsersTest() {
 		when(repository.findAll()).thenReturn(Stream
 				.of(
-                        new Employee(376, "A", "B", "C", null), new Employee(1, "ABC", "ccc", "UK", null)).collect(Collectors.toList()));
+						new Employee(1, "A", "B", "C", null, null),
+						new Employee(2, "ABC", "ccc", "UK", null,null)
+				)
+				.collect(Collectors.toList()));
 		assertEquals(2, service.getEmployees().size());
 	}
 
@@ -50,14 +53,14 @@ class SpringBootBackendCrudApplicationTests {
 
 	@Test
 	public void saveUserTest() {
-		Employee user = new Employee(2, "m", "h", "u", null);
+		Employee user = new Employee(2, "m", "h", "u", null, null);
 		when(repository.save(user)).thenReturn(user);
 		assertEquals(user, service.addEmployee(user));
 	}
 
 	@Test
 	public void deleteUserTest() {
-		Employee user = new Employee(2, "m", "t", "k",null);
+		Employee user = new Employee(2, "m", "t", "k",null, null);
 		service.deleteEmployee(user);
 		verify(repository, times(1)).delete(user);
 	}
