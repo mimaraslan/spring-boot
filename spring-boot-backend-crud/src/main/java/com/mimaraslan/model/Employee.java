@@ -1,11 +1,11 @@
 package com.mimaraslan.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
-
 import javax.persistence.*;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
-import java.util.Date;
+import java.util.*;
 
 @Getter
 @Setter
@@ -19,7 +19,7 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Size(min = 2, message = "Name should have at least 2 character")
+    @Size(min = 2, message = "Name should have at least 2 characters")
     @Column(name = "first_name")
     private String firstName;
 
@@ -32,4 +32,12 @@ public class Employee {
     @Past
     @Column(name = "birthday")
     private Date birthDay;
+
+   // @OneToMany(mappedBy = "employee", fetch = FetchType.LAZY)
+   // private List<Department> departments;
+
+    @JsonIgnoreProperties("employee") // for Hibernate N+1 Queries Problem
+    @OneToMany(mappedBy = "employee", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private Set<Department> departments;
+
 }
