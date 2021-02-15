@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.mimaraslan</groupId>
 	<artifactId>spring-boot-backend-crud</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.4-SNAPSHOT</version>
 	<name>spring-boot-backend-crud</name>
 	<description>Full stack demo project for Spring Boot</description>
 	<properties>
@@ -64,12 +64,12 @@
 		</dependency>
 
 		<!-- Content Negotiation - Implementing Support for XML -->
-		<!--
+
 			<dependency>
 				<groupId>com.fasterxml.jackson.dataformat</groupId>
 				<artifactId>jackson-dataformat-xml</artifactId>
 			</dependency>
-		-->
+
 
 		<!-- Configuring Auto Generation of Swagger Documentation
 			http://localhost:8082/swagger-ui/index.html
@@ -79,13 +79,6 @@
 			<artifactId>springdoc-openapi-ui</artifactId>
 			<version>1.6.6</version>
 		</dependency>
-		<!--
-		<dependency>
-			<groupId>io.swagger.core.v3</groupId>
-			<artifactId>swagger-annotations</artifactId>
-			<version>2.1.13</version>
-		</dependency>
-		-->
 
 		<!-- HAL - Hypertext Application Language
 			http://localhost:8082/explorer/index.html
