@@ -38,6 +38,6 @@ public class Employee {
 
     @JsonIgnoreProperties("employee") // for Hibernate N+1 Queries Problem
     @OneToMany(mappedBy = "employee", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private Set<Department> departments;
+    private List<Department> departments;
 
 }

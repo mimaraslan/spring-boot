@@ -1,5 +1,6 @@
 package com.mimaraslan.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,6 +25,7 @@ public class Department {
    // @Column(name = "employee_id")
    // private Employee employee;
 
+    @JsonIgnore
     @ManyToOne//(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "employee_id", nullable = false)
     private Employee employee;
