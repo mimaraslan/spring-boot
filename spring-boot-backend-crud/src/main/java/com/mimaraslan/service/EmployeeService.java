@@ -1,6 +1,8 @@
 package com.mimaraslan.service;
 
+import com.mimaraslan.model.Department;
 import com.mimaraslan.model.Employee;
+import com.mimaraslan.repository.DepartmentRepository;
 import com.mimaraslan.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,14 +13,18 @@ import java.util.List;
 public class EmployeeService {
 
     @Autowired
-    private EmployeeRepository repository;
+    private EmployeeRepository employeeRepository;
+
+    @Autowired
+    private DepartmentRepository departmentRepository;
+
 
     public Employee addEmployee(Employee employee) {
-        return repository.save(employee);
+        return employeeRepository.save(employee);
     }
 
     public List<Employee> getEmployees() {
-        List<Employee> employees = repository.findAll();
+        List<Employee> employees = employeeRepository.findAll();
         System.out.println("Getting data from DB : " + employees);
         return employees;
     }
@@ -28,6 +34,6 @@ public class EmployeeService {
     }
 */
     public void deleteEmployee(Employee employee) {
-        repository.delete(employee);
+        employeeRepository.delete(employee);
     }
 }
