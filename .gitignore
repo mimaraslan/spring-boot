@@ -126,3 +126,7 @@ spring-boot-docker-rest/mvnw
 spring-boot-docker-rest/.mvn/wrapper/maven-wrapper.properties
 
 spring-boot-rest-hateoas/mvnw
+
+spring-boot-microservices-currency-converter/.mvn/wrapper/maven-wrapper.properties
+
+spring-boot-microservices-currency-converter/mvnw
