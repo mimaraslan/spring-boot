@@ -130,3 +130,13 @@ spring-boot-rest-hateoas/mvnw
 spring-boot-microservices-currency-converter/.mvn/wrapper/maven-wrapper.properties
 
 spring-boot-microservices-currency-converter/mvnw
+
+spring-boot-multi-maven-project/.mvn/wrapper/maven-wrapper.properties
+
+spring-boot-multi-maven-project/mvnw
+
+spring-boot-multi-maven-project/sub-project1/mvnw
+
+spring-boot-microservices-currency-converter/service-a/mvnw
+
+spring-boot-microservices-currency-converter/limits-service/mvnw
