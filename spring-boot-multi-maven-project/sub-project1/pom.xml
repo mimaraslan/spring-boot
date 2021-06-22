@@ -12,7 +12,7 @@
     <artifactId>sub-project1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>sub-project1</name>
-    <description>service-a</description>
+    <description>sub-project1</description>
 
     <properties>
         <java.version>11</java.version>
@@ -35,14 +35,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
             </plugin>
         </plugins>
     </build>

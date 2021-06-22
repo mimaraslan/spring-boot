@@ -17,9 +17,17 @@
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
+		<!-- SUB PROJECT 1 -->
 		<dependency>
 			<groupId>com.mimaraslan</groupId>
 			<artifactId>sub-project1</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<!-- SUB PROJECT 2 -->
+		<dependency>
+			<groupId>com.mimaraslan</groupId>
+			<artifactId>sub-project2</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
