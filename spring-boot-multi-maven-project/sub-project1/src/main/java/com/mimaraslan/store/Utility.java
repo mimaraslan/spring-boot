@@ -1,4 +1,4 @@
-package com.mimaraslan.util;
+package com.mimaraslan.store;
 
 public class Utility {
 
