@@ -1,6 +1,6 @@
-package com.mimaraslan.util;
+package com.mimaraslan.store;
 
-public class Utility {
+public class Helper {
 
     public static boolean isNull(String message) {
         if (message == null || message.isEmpty()) {
