@@ -140,3 +140,5 @@ spring-boot-multi-maven-project/sub-project1/mvnw
 spring-boot-microservices-currency-converter/service-a/mvnw
 
 spring-boot-microservices-currency-converter/limits-service/mvnw
+
+spring-boot-multilang-i18n/mvnw
