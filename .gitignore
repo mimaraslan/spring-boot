@@ -144,3 +144,5 @@ spring-boot-microservices-currency-converter/limits-service/mvnw
 spring-boot-multilang-i18n/mvnw
 
 spring-boot-rest-hal/mvnw
+
+spring-boot-rest-jackson-xml/mvnw
