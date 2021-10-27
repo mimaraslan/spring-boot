@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -47,7 +46,7 @@ public class UserController {
 
 	// http://localhost:8080/api/v1/users
 	@PostMapping("/users")
-	public User createUser(@Valid @RequestBody User user) {
+	public User createUser( @RequestBody User user) {
 		return userRepository.save(user);
 	}
 
@@ -56,7 +55,7 @@ public class UserController {
 	@PutMapping("/users/{id}")
 	public ResponseEntity<User> updateUser(
 			@PathVariable(value = "id") Long userId,
-			@Valid @RequestBody User userDetails) throws ResourceNotFoundException {
+			@RequestBody User userDetails) throws ResourceNotFoundException {
 		User user = userRepository.findById(userId)
 		        .orElseThrow(() -> new ResourceNotFoundException("User not found :: " + userId));
 		
