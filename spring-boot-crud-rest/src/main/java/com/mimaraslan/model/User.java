@@ -32,23 +32,23 @@ public class User {
 	private String lastName;
 
 	@Column(name = "email_address", nullable = false)
-	private String emailId;
+	private String email;
 
-	@Column(name = "created_at", nullable = false)
+	@Column(name = "created_at")
 	@CreatedDate
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date createdAt;
 
-	@Column(name = "created_by", nullable = false)
+	@Column(name = "created_by")
 	@CreatedBy
 	private String createdBy;
 
-	@Column(name = "updated_at", nullable = false)
+	@Column(name = "updated_at")
 	@LastModifiedDate
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date updatedAt;
 
-	@Column(name = "updated_by", nullable = false)
+	@Column(name = "updated_by")
 	@LastModifiedBy
 	private String updatedby;
 	
@@ -77,11 +77,11 @@ public class User {
 	}
 	
 
-	public String getEmailId() {
-		return emailId;
+	public String getEmail() {
+		return email;
 	}
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 
