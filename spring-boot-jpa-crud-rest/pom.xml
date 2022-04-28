@@ -9,7 +9,7 @@
 		<relativePath/>
 	</parent>
 	<groupId>com.mimaraslan</groupId>
-	<artifactId>spring-boot-crud-rest</artifactId>
+	<artifactId>spring-boot-jpa-crud-rest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-crud-rest</name>
 	<description>REST CRUD web application demo project for Spring Boot</description>
