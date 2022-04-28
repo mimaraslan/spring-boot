@@ -9,9 +9,9 @@
 		<relativePath/> 
 	</parent>
 	<groupId>com.mimaraslan</groupId>
-	<artifactId>spring-boot-jwt-jpa-mysql</artifactId>
+	<artifactId>spring-boot-jpa-jwt-mysql</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-jwt-jpa-mysql</name>
+	<name>spring-boot-jpa-jwt-mysql</name>
 	<description>Spring Security JWT Authentication example – RestAPIs SpringBoot + Spring MVC + Spring JPA + MySQL</description>
 
 	<properties>
