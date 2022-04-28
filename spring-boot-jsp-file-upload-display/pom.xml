@@ -9,7 +9,7 @@
 		<relativePath/> 
 	</parent>
 	<groupId>com.mimaraslan</groupId>
-	<artifactId>spring-boot-file-upload-jsp-display</artifactId>
+	<artifactId>spring-boot-jsp-file-upload-display</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-file-upload-jsp-display</name>
 	<description>A image file upload and display on the JSP page demo project for Spring Boot</description>
