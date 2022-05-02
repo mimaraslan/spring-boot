@@ -1,31 +1,41 @@
 package com.mimaraslan;
 
-public class A {
+public class c {
 
     static float tax_rate = 0.06F;
 
     public static void main(String[] args) {
 
-        // Burada sıradan düz bir atama referansları String pool'da aynı.
-        String s1 = "Java";
-        String s2 = "Java";
-        System.out.println((s1 == s2) ? "true" : "false");//true
-        System.out.println((s1.equals(s2)) ? "true" : "false");//true
-        // equals sadece değerlere bakıyor.
-        // == hem değerlere hem de referanslara bakıyor.
+        Object s1 = null + " " + null;
+        String s2 = null + " " + null;
 
-        String s3 = new String("Java");
-        String s4 = new String("Java");
-        System.out.println((s3 == s4) ? "true" : "false"); //false
-        System.out.println((s3.equals(s4)) ? "true" : "false");//true
-
-        // Burada intern metodu referansları String pool'da aynı yapıyor.
-        String s5 = new String("Java").intern();
-        String s6 = new String("Java").intern();
-        System.out.println((s5 == s6) ? "true" : "false"); //true
-        System.out.println((s5.equals(s6)) ? "true" : "false");//true
+        System.out.println(s1 == s2);
+        System.out.println(s1.equals(s2));
 
 
+        int a = 10;
+        int b = 10;
+        System.out.println(a + b + " " + a + b);
+        System.out.println("" + a + b + " " + a + b);
+
+        System.out.println(a + b + " " + (a + b));
+        System.out.println("" + a + b + " " + (a + b));
+
+
+
+
+
+        String a1 = "Java";
+        a1 += 10 + 20;
+        System.out.println(a1);
+
+        String a2 = "Java";
+        a2 = a2 + 10 + 20;
+        System.out.println(a2);
+
+        String a3 = "Java";
+        a3 = a3 + (10 + 20);
+        System.out.println(a3);
 
 
     }
