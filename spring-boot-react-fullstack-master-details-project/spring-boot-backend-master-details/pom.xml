@@ -9,10 +9,10 @@
         <relativePath/>
     </parent>
     <groupId>com.mimaraslan</groupId>
-    <artifactId>spring-boot-jpa-mysql-crud-master-details</artifactId>
+    <artifactId>spring-boot-backend-master-details</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-jpa-mysql-crud-master-details</name>
-    <description>spring-boot-jpa-mysql-crud-master-details</description>
+    <name>spring-boot-backend-master-details</name>
+    <description>spring-boot-backend-master-details</description>
     <properties>
         <java.version>17</java.version>
     </properties>
