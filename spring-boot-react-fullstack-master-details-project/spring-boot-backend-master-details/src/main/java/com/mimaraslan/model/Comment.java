@@ -1,11 +1,11 @@
-package com.mimaraslan.models;
+package com.mimaraslan.model;
 
 import lombok.Data;
 
 import javax.persistence.*;
 
 @Entity
-@Table (name = "comment")
+@Table(name = "comment")
 @Data
 public class Comment {
 
