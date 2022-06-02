@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.mimaraslan</groupId>
     <artifactId>spring-boot-backend-master-details</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>spring-boot-backend-master-details</name>
     <description>spring-boot-backend-master-details</description>
     <properties>
