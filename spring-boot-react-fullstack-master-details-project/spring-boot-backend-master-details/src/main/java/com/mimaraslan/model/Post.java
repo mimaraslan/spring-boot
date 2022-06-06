@@ -13,6 +13,7 @@ import javax.persistence.*;
 public class Post {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long Id;
 
     @ManyToOne(fetch = FetchType.LAZY)
