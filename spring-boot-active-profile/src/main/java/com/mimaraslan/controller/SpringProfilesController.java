@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SpringProfilesController {
 
-	@Value("${property.myval}")
+	@Value("${property.myVal}")
 	private String profile;
 
 	@Autowired
