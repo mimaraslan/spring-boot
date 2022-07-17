@@ -11,8 +11,8 @@ SELECT * FROM mydemodb.employees;
 
 
 INSERT INTO `mydemodb`.`department` (`job`, `section_name`, `employee_id`) VALUES ('Java', 'Software', '1');
-INSERT INTO `mydemodb`.`department` (`job`, `section_name`, `employee_id`) VALUES ('AWS', 'Colud', '1');
-INSERT INTO `mydemodb`.`department` (`job`, `section_name`, `employee_id`) VALUES ('IT', 'Colud', '2');
+INSERT INTO `mydemodb`.`department` (`job`, `section_name`, `employee_id`) VALUES ('AWS', 'Cloud', '1');
+INSERT INTO `mydemodb`.`department` (`job`, `section_name`, `employee_id`) VALUES ('IT', 'Cloud', '2');
 INSERT INTO `mydemodb`.`department` (`job`, `section_name`, `employee_id`) VALUES ('Blockchain', 'Software', '3');
 
 
