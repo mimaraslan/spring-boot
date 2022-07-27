@@ -1,8 +1,9 @@
 {
 	"info": {
 		"_postman_id": "0c548332-00b6-42ca-9efa-40f836b14fc5",
-		"name": "spring-react-crud",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"name": "spring-boot-react-crud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "77926"
 	},
 	"item": [
 		{
@@ -79,6 +80,66 @@
 			"response": []
 		},
 		{
+			"name": "/api/v1/employees",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Momo\",\n    \"lastName\": \"Nini\",\n    \"emailId\": \"Test2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/v1/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/employees",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Rere\",\n    \"lastName\": \"Rara\",\n    \"emailId\": \"Test3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/v1/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "/api/v1/employees/{id}",
 			"request": {
 				"method": "PUT",
@@ -104,6 +165,28 @@
 						"v1",
 						"employees",
 						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/employees/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/v1/employees/18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"employees",
+						"18"
 					]
 				}
 			},
