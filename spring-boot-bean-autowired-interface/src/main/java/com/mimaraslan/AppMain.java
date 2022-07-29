@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.mimaraslan.config.MyInterface;
 
 @SpringBootApplication
-public class MainApplication implements CommandLineRunner {
+public class AppMain implements CommandLineRunner {
 
 	@Autowired 
 	private MyInterface myInterface;
@@ -18,8 +18,9 @@ public class MainApplication implements CommandLineRunner {
 		System.out.println(myInterface.getAppName());
 		System.out.println(myInterface.getAppPortNumber());
 	}
-
+	
 	public static void main(String[] args) {
-		SpringApplication.run(MainApplication.class, args);
+		SpringApplication.run(AppMain.class, args);
 	}
+
 }
