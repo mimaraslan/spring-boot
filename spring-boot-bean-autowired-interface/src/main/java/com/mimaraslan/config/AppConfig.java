@@ -11,7 +11,7 @@ public class AppConfig {
 	
 	@Bean
 	public MyInterface getAppInfo(
-			@Value("${app.name}") String appName, 
+			@Value("${app.name}") String appName,
 			@Value("${server.port}") int appPortNumber) {
 		
 		return new MyInterface() {
@@ -25,6 +25,7 @@ public class AppConfig {
 			public int getAppPortNumber() {
 				return appPortNumber;
 			}
+
 		};
 	}
 }
