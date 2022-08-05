@@ -7,11 +7,13 @@ import org.springframework.context.annotation.Configuration;
 import com.mimaraslan.model.Manager;
 import com.mimaraslan.model.Person;
 import com.mimaraslan.model.Student;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class PersonFactory {
 
     @Bean
+    @Primary
     @Qualifier("student")
     public Person createStudent() {
         return new Student();
