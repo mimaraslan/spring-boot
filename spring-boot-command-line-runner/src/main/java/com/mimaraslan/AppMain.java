@@ -5,10 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class SpringBootCommandLineRunnerApplication {
+public class AppMain {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootCommandLineRunnerApplication.class, args);
+		SpringApplication.run(AppMain.class, args);
 	}
 	
 	@Bean
