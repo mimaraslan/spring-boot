@@ -9,13 +9,13 @@ import org.springframework.context.ApplicationContext;
 import com.mimaraslan.service.MessageProcessor;
 
 @SpringBootApplication
-public class MainApplication {
+public class AppMain {
 	
-	private static Logger LOG = LoggerFactory.getLogger(MainApplication.class);
+	private static Logger LOG = LoggerFactory.getLogger(AppMain.class);
 
 	public static void main(String[] args) {
 		LOG.info("STARTING THE APPLICATION");
-		ApplicationContext applicationContext = SpringApplication.run(MainApplication.class, args);
+		ApplicationContext applicationContext = SpringApplication.run(AppMain.class, args);
 		
 		MessageProcessor messageProcessor = applicationContext.getBean(MessageProcessor.class);
 		messageProcessor.processMsg("Message sending ");
