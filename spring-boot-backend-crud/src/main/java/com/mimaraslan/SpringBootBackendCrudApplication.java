@@ -31,7 +31,6 @@ public class SpringBootBackendCrudApplication {
 		employee2.setLastName("LastName2");
 		employee2.setEmailId("EmailId2");
 		employeeRepository.save(employee2);
-
 	}
 	*/
 }
