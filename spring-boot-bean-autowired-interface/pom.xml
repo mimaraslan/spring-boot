@@ -5,16 +5,16 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.5.10</version>
+		<version>3.0.6</version>
 		<relativePath/> 
 	</parent>
 	<groupId>com.mimaraslan</groupId>
-	<artifactId>spring-boot-bean-autowired</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>spring-boot-bean-autowired-interface</artifactId>
+	<version>1.0.1</version>
 	<name>spring-boot-bean-autowired</name>
-	<description>Autowired project for Spring Boot</description>
+	<description>Bean Autowired Interface project for Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>20</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
