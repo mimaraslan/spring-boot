@@ -7,15 +7,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class MessageProcessorImpl implements MessageProcessor {
 
-	@Autowired
-	@Qualifier("aService")
-	private SelectService myService;
+    @Autowired
+    @Qualifier("aService")
+    private SelectService myService;
 
-	public void setMyService(SelectService myService) {
-		this.myService = myService;
-	}
+    public void setMyService(SelectService myService) {
+        this.myService = myService;
+    }
 
-	public void processMsg(String message) {
-		myService.sendMsg(message);
-	}
+    public void processMsg(String message) {
+        myService.sendMsg(message);
+    }
 }
