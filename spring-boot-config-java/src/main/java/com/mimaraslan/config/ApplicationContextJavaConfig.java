@@ -12,23 +12,23 @@ import com.mimaraslan.service.SelectService;
 @Configuration
 public class ApplicationContextJavaConfig {
 
-	@Bean(name = "aService")
-	public SelectService aService() {
-		return new AService();
-	}
+    @Bean(name = "aService")
+    public SelectService aService() {
+        return new AService();
+    }
 
-	@Bean(name = "bService")
-	public SelectService bService() {
-		return new BService();
-	}
+    @Bean(name = "bService")
+    public SelectService bService() {
+        return new BService();
+    }
 
-	@Bean(name = "cService")
-	public SelectService cService() {
-		return new CService();
-	}
+    @Bean(name = "cService")
+    public SelectService cService() {
+        return new CService();
+    }
 
-	@Bean
-	public MessageProcessor messageProcessor() {
-		return new MessageProcessorImpl(aService());
-	}
+    @Bean
+    public MessageProcessor messageProcessor() {
+        return new MessageProcessorImpl(aService());
+    }
 }
