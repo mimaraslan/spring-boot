@@ -5,14 +5,14 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 public class MessageProcessorImpl implements MessageProcessor {
 
-	private SelectService selectService;
+    private SelectService selectService;
 
-	@Autowired
-	public MessageProcessorImpl(@Qualifier("aService") SelectService selectService) {
-		this.selectService = selectService;
-	}
+  //  @Autowired
+    public MessageProcessorImpl(@Qualifier("aService") SelectService selectService) {
+        this.selectService = selectService;
+    }
 
-	public void processMsg(String message) {
-		selectService.sendMsg(message);
-	}
+    public void processMsg(String message) {
+        selectService.sendMsg(message);
+    }
 }
