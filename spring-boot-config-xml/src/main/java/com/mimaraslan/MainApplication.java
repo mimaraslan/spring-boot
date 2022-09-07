@@ -12,15 +12,15 @@ import com.mimaraslan.service.MessageProcessor;
 @ImportResource({"classpath*:applicationContext.xml"})
 public class MainApplication {
 
-	private static Logger LOG = LoggerFactory.getLogger(MainApplication.class);
+    private static Logger LOG = LoggerFactory.getLogger(MainApplication.class);
 
-	public static void main(String[] args) {
-		LOG.info("STARTING THE APPLICATION");
-		ApplicationContext applicationContext = SpringApplication.run(MainApplication.class, args);
-		
-		MessageProcessor messageProcessor = applicationContext.getBean(MessageProcessor.class);
-		messageProcessor.processMsg("Message sending ");
-		LOG.info("APPLICATION FINISHED");
-	}
+    public static void main(String[] args) {
+        LOG.info("STARTING THE APPLICATION");
+        ApplicationContext applicationContext = SpringApplication.run(MainApplication.class, args);
+
+        MessageProcessor messageProcessor = applicationContext.getBean(MessageProcessor.class);
+        messageProcessor.processMsg("Message sending ");
+        LOG.info("APPLICATION FINISHED");
+    }
 
 }
