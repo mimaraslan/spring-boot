@@ -2,13 +2,13 @@ package com.mimaraslan.service;
 
 public class MessageProcessorImpl implements MessageProcessor {
 
-	private SelectService myService;
+    private SelectService myService;
 
-	public void setMyService(SelectService myService) {
-		this.myService = myService;
-	}
+    public void setMyService(SelectService myService) {
+        this.myService = myService;
+    }
 
-	public void processMsg(String message) {
-		myService.sendMsg(message);
-	}
+    public void processMsg(String message) {
+        myService.sendMsg(message);
+    }
 }
