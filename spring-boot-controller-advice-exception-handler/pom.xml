@@ -5,17 +5,19 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.5.10</version>
-		<relativePath/> 
+		<version>3.0.6</version>
+		<relativePath/>
 	</parent>
 	<groupId>com.mimaraslan</groupId>
 	<artifactId>spring-boot-controller-advice-exception-handler</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<name>spring-boot-controller-advice-exception-handler</name>
 	<description>spring-boot-controller-advice-exception-handler</description>
+
 	<properties>
-		<java.version>11</java.version>
+		<java.version>20</java.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
