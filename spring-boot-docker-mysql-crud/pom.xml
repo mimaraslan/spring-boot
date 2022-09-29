@@ -5,17 +5,17 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.2.4.RELEASE</version>
+		<version>3.0.6</version>
 		<relativePath/> 
 	</parent>
 	<groupId>com.mimaraslan</groupId>
 	<artifactId>spring-boot-docker-mysql-crud</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<name>spring-boot-docker-mysql-crud</name>
 	<description>Spring Boot and MySQL Application and run in Docker (end-to-end)</description>
 
 	<properties>
-		<java.version>11</java.version>
+		<java.version>20</java.version>
 	</properties>
 
 	<dependencies>

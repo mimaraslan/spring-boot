@@ -5,9 +5,9 @@
 	http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.turkeyjug</groupId>
+	<groupId>com.mimaraslan</groupId>
 	<artifactId>spring-boot-cross-origin</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<name>spring-boot-cross-origin</name>
 	<description>Enable Cross-Origin Resource Sharing in REST</description>
 	
