@@ -18,36 +18,36 @@ import com.mimaraslan.service.UserService;
 @RestController
 public class UserController {
 
-	@Autowired
-	private UserService userService;
+    @Autowired
+    private UserService userService;
 
-	@GetMapping("/users")
-	public List<User> retrieveAllUsers() {
-		return userService.findAll();
-	}
+    @GetMapping("/users")
+    public List<User> retrieveAllUsers() {
+        return userService.findAll();
+    }
 
-	@GetMapping("/users/{id}")
-	public User retrieveUserV1(@PathVariable int id) {
-		return userService.findOne(id);
-	}
+    @GetMapping("/users/{id}")
+    public User retrieveUserV1(@PathVariable int id) {
+        return userService.findOne(id);
+    }
 
-	@PostMapping("/users/v1")
-	public User createUserV1(@RequestBody User user) {
-		User savedUser = userService.save(user);
-		return savedUser;
-	}
+    @PostMapping("/users/v1")
+    public User createUserV1(@RequestBody User user) {
+        User savedUser = userService.save(user);
+        return savedUser;
+    }
 
-	@PostMapping("/users")
-	public ResponseEntity<Object> createUser(@RequestBody User user) {
-		User savedUser = userService.save(user);
+    @PostMapping("/users")
+    public ResponseEntity<Object> createUser(@RequestBody User user) {
+        User savedUser = userService.save(user);
 
-		URI location = ServletUriComponentsBuilder
-				.fromCurrentRequest().path("/{id}")
-				.buildAndExpand(savedUser.getId())
-				.toUri();
+        URI location = ServletUriComponentsBuilder
+                .fromCurrentRequest().path("/{id}")
+                .buildAndExpand(savedUser.getId())
+                .toUri();
 
-		return ResponseEntity.created(location).build();
+        return ResponseEntity.created(location).build();
 
-	}
+    }
 
 }

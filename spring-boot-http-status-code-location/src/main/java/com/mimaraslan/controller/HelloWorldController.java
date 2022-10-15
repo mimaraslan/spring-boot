@@ -9,18 +9,18 @@ import com.mimaraslan.model.HelloWorld;
 @RestController
 public class HelloWorldController {
 
-	@GetMapping("/hi")
-	public String hi() {
-		return "Hi";
-	}
+    @GetMapping("/hi")
+    public String hi() {
+        return "Hi";
+    }
 
-	@GetMapping("/hello")
-	public HelloWorld helloWorld() {
-		return new HelloWorld("Hello");
-	}
+    @GetMapping("/hello")
+    public HelloWorld helloWorld() {
+        return new HelloWorld("Hello");
+    }
 
-	@GetMapping("/hello/{name}")
-	public HelloWorld helloWorld(@PathVariable String name) {
-		return new HelloWorld("Hello " + name);
-	}
+    @GetMapping("/hello/{name}")
+    public HelloWorld helloWorld(@PathVariable String name) {
+        return new HelloWorld("Hello " + name);
+    }
 }
