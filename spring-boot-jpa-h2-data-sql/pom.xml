@@ -4,20 +4,22 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
 	https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.3.0.M2</version>
+		<version>3.0.6</version>
 		<relativePath/> 
 	</parent>
+
 	<groupId>com.mimaraslan</groupId>
 	<artifactId>spring-boot-jpa-h2-data-sql</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<name>spring-boot-h2-data-sql</name>
 	<description>Spring Boot JPA H2 Data SQL</description>
 
 	<properties>
-		<java.version>11</java.version>
+		<java.version>20</java.version>
 	</properties>
 
 	<dependencies>
