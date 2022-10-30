@@ -2,7 +2,7 @@ import axios from "axios";
 
 const EMPLOYEE_BASE_REST_API_URL = "http://localhost:8082/api/v1/employees"
 
-class EmployeeServies{
+class EmployeeService{
 
     getAllEmployees(){
         return axios.get(EMPLOYEE_BASE_REST_API_URL)
@@ -25,4 +25,4 @@ class EmployeeServies{
     }
 }
 
-export default new EmployeeServies();
+export default new EmployeeService();
