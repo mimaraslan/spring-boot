@@ -8,11 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
-import javax.transaction.Transactional;
+import jakarta.transaction.Transactional;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -37,7 +35,7 @@ public class MainApplication implements CommandLineRunner {
     	Student student1 = new Student("Katerina");
         Student student2 = new Student("Lena");
         Student student3 = new Student("Anna");
-        Student student4 = new Student("Dahsa");
+        Student student4 = new Student("Dasha");
         Student student5 = new Student("Raya");
 
         Course course1 = new Course("Machine Learning");
@@ -66,18 +64,18 @@ public class MainApplication implements CommandLineRunner {
         studentRepository.save(student4);
         studentRepository.save(student5);
 
-        Set<Student> studentsGoup1 = new HashSet<Student>();
-        studentsGoup1.add(student1);
-        studentsGoup1.add(student2);
+        Set<Student> studentsGroup1 = new HashSet<Student>();
+        studentsGroup1.add(student1);
+        studentsGroup1.add(student2);
         
-        Set<Student> studentsGoup2 = new HashSet<Student>();
-        studentsGoup2.add(student3);
-        studentsGoup2.add(student4);
-        studentsGoup2.add(student5);
+        Set<Student> studentsGroup2 = new HashSet<Student>();
+        studentsGroup2.add(student3);
+        studentsGroup2.add(student4);
+        studentsGroup2.add(student5);
 
-        course1.setStudents(studentsGoup1);
-        course2.setStudents(studentsGoup1);
-        course3.setStudents(studentsGoup2);
+        course1.setStudents(studentsGroup1);
+        course2.setStudents(studentsGroup1);
+        course3.setStudents(studentsGroup2);
 
         courseRepository.save(course1);
         courseRepository.save(course2);
@@ -111,7 +109,7 @@ public class MainApplication implements CommandLineRunner {
 
             // create three courses
             Course course1 = new Course("Machine Learning", "ML", 13, 900);
-            Course course2 = new Course("Database Systems", "DS", 9, 600);
+            Course course2 = new Course("Database Systems", "DS", 90, 600);
             Course course3 = new Course("Java Technologies", "JT", 11, 0);
 
             // save courses
