@@ -12,18 +12,18 @@ import com.mimaraslan.repository.PageRepository;
 
 @SpringBootApplication
 public class MainApplication {
-	
+
     public static void main(String[] args) {
         SpringApplication.run(MainApplication.class, args);
     }
-    
+
     @Bean
-    public CommandLineRunner mappingDemo(BookRepository bookRepository, 
-    									 PageRepository pageRepository) {
+    public CommandLineRunner mappingDemo(BookRepository bookRepository,
+                                         PageRepository pageRepository) {
         return args -> {
-       
-            
-        	// create a new book
+
+
+            // create a new book
             Book book1 = new Book("Java 101", "Katerina Lena", "123456");
 
             // save the book
@@ -33,8 +33,8 @@ public class MainApplication {
             pageRepository.save(new Page(1, "Introduction contents", "Introduction", book1));
             pageRepository.save(new Page(14, "Java contents", "Java", book1));
             pageRepository.save(new Page(53, "Concurrency contents", "Concurrency", book1));
-            
-            
+
+
             // create a new book
             Book book2 = new Book("Scala 101", "Yulya Rita", "987654");
 
