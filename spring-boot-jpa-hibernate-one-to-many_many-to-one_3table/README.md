@@ -1,5 +1,6 @@
 #  Solution for N+1 queries problem JPA and Hibernate,
 
+CREATE SCHEMA `mydemodb` ;
 
 ![Spring Boot + Apache Spark](src/main/resources/images/Many-to-Many_2_tables.jpg)
 
