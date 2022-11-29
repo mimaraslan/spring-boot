@@ -1,9 +1,7 @@
 package com.mimaraslan.model;
 
-import javax.persistence.*;
-
+import jakarta.persistence.*;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import java.io.Serializable;
 import java.util.Objects;
 
