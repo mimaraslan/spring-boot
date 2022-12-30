@@ -4,7 +4,7 @@ import com.mimaraslan.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.EntityManager;
+import jakarta.persistence.EntityManager;
 
 @Repository
 public class EmployeeRepository {
