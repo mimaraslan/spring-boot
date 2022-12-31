@@ -1,21 +1,17 @@
 package com.mimaraslan.controller;
 
-import java.net.URI;
-import java.util.List;
-
-import com.mimaraslan.repository.EmployeeRepository;
-import com.mimaraslan.service.EmployeeService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.Optional;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
 import com.mimaraslan.execption.EmployeeNotFoundException;
 import com.mimaraslan.model.Employee;
+import com.mimaraslan.repository.EmployeeRepository;
+import com.mimaraslan.service.EmployeeService;
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import java.net.URI;
+import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:3000/")
 @RestController
@@ -56,7 +52,7 @@ public class EmployeeController {
 	}
 
 	@PostMapping("/employees")
-	public ResponseEntity<Object> createEmployee(@Valide @RequestBody Employee employee) {
+	public ResponseEntity<Object> createEmployee(@Valid @RequestBody Employee employee) {
 		Employee savedEmployee = employeeService.save(employee);
 
 		URI location = ServletUriComponentsBuilder
@@ -70,10 +66,13 @@ public class EmployeeController {
 	
 	@DeleteMapping("/employees/{id}")
 	public void deleteEmployee(@PathVariable int id) {
-		Employee employee = employeeService.deleteById(id);
+		// TODO return value
+    	/*Employee employee = employeeService.deleteById(id);
 		if (employee == null) {
 			throw new EmployeeNotFoundException("ID: " + id);
 		}
+		*/
+		employeeService.deleteById(id);
 	}
 
 }
