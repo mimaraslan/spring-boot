@@ -11,14 +11,14 @@ import java.util.List;
 public class EmployeeService {
 
     @Autowired
-    private EmployeeRepository repository;
+    private EmployeeRepository employeeRepository;
 
     public Employee addEmployee(Employee employee) {
-        return repository.save(employee);
+        return employeeRepository.save(employee);
     }
 
     public List<Employee> getEmployees() {
-        List<Employee> employees = repository.findAll();
+        List<Employee> employees = employeeRepository.findAll();
         System.out.println("Getting data from DB : " + employees);
         return employees;
     }
@@ -28,6 +28,28 @@ public class EmployeeService {
     }
 */
     public void deleteEmployee(Employee employee) {
-        repository.delete(employee);
+        employeeRepository.delete(employee);
+    }
+
+    public List<Employee> findAll() {
+        employeeRepository.findAll();
+        // TODO return value
+        return null;
+    }
+
+    public Employee findOne(int id) {
+        employeeRepository.findById((long) id);
+        // TODO return value
+        return null;
+    }
+
+    public Employee save(Employee employee) {
+        return employee;
+    }
+
+    public Employee deleteById(int id) {
+        employeeRepository.deleteById((long) id);
+        // TODO return value
+        return null;
     }
 }
