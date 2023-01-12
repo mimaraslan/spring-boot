@@ -25,9 +25,10 @@ import com.mimaraslan.utils.UtilBase64Image;
 
 @RestController
 public class ImageController {
-
+// 	private static String baseFolderPath = System.getProperty("user.dir")+"/src/main/resources/static/stringtoolong.txt";
 	private static Map<Integer, Image> imageRepository = new HashMap<>();
 	static {
+
 		Image image = new Image();
 		image.setId(1);
 		image.setName("demoImage.jpg");
