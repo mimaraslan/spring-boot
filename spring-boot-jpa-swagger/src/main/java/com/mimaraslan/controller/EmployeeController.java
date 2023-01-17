@@ -3,7 +3,6 @@ package com.mimaraslan.controller;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -22,6 +21,8 @@ import io.swagger.annotations.ApiResponses;
 import com.mimaraslan.exceptions.ResourceNotFoundException;
 import com.mimaraslan.model.Employee;
 import com.mimaraslan.repository.EmployeeRepository;
+
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/api/v1")
