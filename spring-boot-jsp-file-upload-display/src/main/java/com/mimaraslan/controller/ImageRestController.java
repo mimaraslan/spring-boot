@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Objects;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
@@ -29,7 +30,7 @@ public class ImageRestController {
     @RequestMapping(value = "/upload/file", method = RequestMethod.POST, consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<Object> uploadFile(@RequestParam("fileName") MultipartFile fileName) {
  
-        File uploadedFile = new File(baseFolderPath, fileName.getOriginalFilename());
+        File uploadedFile = new File(baseFolderPath, Objects.requireNonNull(fileName.getOriginalFilename()));
  
         try {
             uploadedFile.createNewFile();
