@@ -2,7 +2,6 @@ package com.mimaraslan.controller;
 
 import com.mimaraslan.model.Employee;
 import com.mimaraslan.service.EmployeeService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
