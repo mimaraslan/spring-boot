@@ -20,7 +20,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public Employee saveEmployee(Employee employee) throws Exception {
         Optional<Employee> savedEmployee = employeeRepository.findByEmail(employee.getEmail());
-        if(savedEmployee.isPresent()){
+        if (savedEmployee.isPresent()) {
             throw new Exception("Employee already exist with given email:" + employee.getEmail());
         }
         return employeeRepository.save(employee);
