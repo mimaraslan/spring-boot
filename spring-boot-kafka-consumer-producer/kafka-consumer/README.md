@@ -69,3 +69,13 @@ https://www.youtube.com/watch?v=wlFnlNthAPQ
 8. Send CSV File data to kafka
 
    ```bin/kafka-console-producer --broker-list localhost:9092 --topic NewTopic1 <bin/customers.csv```
+
+
+
+![Kafka](src/main/resources/images/01.jpg)
+
+![Kafka](src/main/resources/images/02.jpg)
+
+![Kafka](src/main/resources/images/03.jpg)
+
+![Kafka](src/main/resources/images/04.jpg)

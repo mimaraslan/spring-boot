@@ -73,10 +73,10 @@ https://www.youtube.com/watch?v=wlFnlNthAPQ
 
 
 
-![Kafka](src/main/resources/images/01.jpg)
+![Kafka](kafka-consumer/src/main/resources/images/01.jpg)
 
-![Kafka](src/main/resources/images/02.jpg)
+![Kafka](kafka-consumer/src/main/resources/images/02.jpg)
 
-![Kafka](src/main/resources/images/03.jpg)
+![Kafka](kafka-consumer/src/main/resources/images/03.jpg)
 
-![Kafka](src/main/resources/images/04.jpg)
+![Kafka](kafka-consumer/src/main/resources/images/04.jpg)
