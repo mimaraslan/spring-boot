@@ -9,6 +9,14 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: 123456789
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 768M
+        reservations:
+          cpus: "0.25"
+          memory: 512M
 
   elasticsearch:
     image: elasticsearch:7.17.3
@@ -17,3 +25,12 @@ services:
       - "9300:9300"
     environment:
       discovery.type: single-node
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 512M
+        reservations:
+          cpus: "0.25"
+          memory: 256M
+
