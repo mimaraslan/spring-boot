@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+// http://localhost:8080/api/employees
 @RestController
 @RequestMapping("/api/employees")
 public class EmployeeController {
@@ -25,11 +26,14 @@ public class EmployeeController {
         return employeeService.saveEmployee(employee);
     }
 
+
+    // http://localhost:8080/api/employees
     @GetMapping
     public List<Employee> getAllEmployees(){
         return employeeService.getAllEmployees();
     }
 
+    // http://localhost:8080/api/employees/1
     @GetMapping("{id}")
     public ResponseEntity<Employee> getEmployeeById(@PathVariable("id") long employeeId){
         return employeeService.getEmployeeById(employeeId)
@@ -37,6 +41,8 @@ public class EmployeeController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+
+    // http://localhost:8080/api/employees/1
     @PutMapping("{id}")
     public ResponseEntity<Employee> updateEmployee(@PathVariable("id") long employeeId,
                                                    @RequestBody Employee employee){
@@ -54,6 +60,7 @@ public class EmployeeController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    // http://localhost:8080/api/employees/1
     @DeleteMapping("{id}")
     public ResponseEntity<String> deleteEmployee(@PathVariable("id") long employeeId){
 
