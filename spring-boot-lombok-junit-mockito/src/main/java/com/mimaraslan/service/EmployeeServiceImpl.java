@@ -28,21 +28,21 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public List<Employee> getAllEmployees() {
-        return null;
+        return employeeRepository.findAll();
     }
 
     @Override
     public Optional<Employee> getEmployeeById(long id) {
-        return Optional.empty();
+        return employeeRepository.findById(id);
     }
 
     @Override
     public Employee updateEmployee(Employee updatedEmployee) {
-        return null;
+        return employeeRepository.save(updatedEmployee);
     }
 
     @Override
     public void deleteEmployee(long id) {
-
+        employeeRepository.deleteById(id);
     }
 }
