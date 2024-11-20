@@ -14,7 +14,7 @@ public class SpringBootBackendCrudApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootBackendCrudApplication.class, args);
 	}
-	
+
 }
 
 
@@ -42,7 +42,6 @@ public class SpringBootBackendCrudApplication implements CommandLineRunner {
 		employee2.setLastName("LastName2");
 		employee2.setEmailId("EmailId2");
 		employeeRepository.save(employee2);
-
 	}
 
 }
