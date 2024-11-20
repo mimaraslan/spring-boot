@@ -7,22 +7,20 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 @SpringBootApplication
 public class SpringBootBackendCrudApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootBackendCrudApplication.class, args);
 	}
-
-	@Autowired
-	private EmployeeRepository employeeRepository;
+	
 }
 
 
-// CommandLineRunner
 /*
+@SpringBootApplication
 public class SpringBootBackendCrudApplication implements CommandLineRunner {
-public class SpringBootBackendCrudApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootBackendCrudApplication.class, args);
