@@ -11,8 +11,10 @@ public class SparkConfig {
 
     @Value("${spark.app.name}")
     private String appName;
+
     @Value("${spark.master}")
     private String masterUri;
+
     //@Value("${spark.home}")
     //private String sparkHome;
 

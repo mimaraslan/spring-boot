@@ -9,11 +9,16 @@ import org.springframework.web.bind.annotation.*;
 
 import com.mimaraslan.service.WordCountService;
 
+// http://localhost:8085
+
 @RestController
+@RequestMapping
 public class WordCountController {
 
     @Autowired
     WordCountService service;
+
+    // http://localhost:8085/wordcount
 
     @PostMapping("/wordcount")
     public Map<String, Long> count(@RequestParam(required = false) String words) {

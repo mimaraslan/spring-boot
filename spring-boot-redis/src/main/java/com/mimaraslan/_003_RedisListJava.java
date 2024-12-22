@@ -20,7 +20,14 @@ public class _003_RedisListJava {
 		List<String> myList = jedis.lrange("studentList", 0, 15);
 
 		for (int i = 0; i < myList.size(); i++) {
-			System.out.println(i + "Stored string in redis:: " + myList.get(i));
+			System.out.println(i + " Stored string in redis:: " + myList.get(i));
 		}
+
+		System.out.println("-------------------------------");
+
+		for (String s : myList) {
+			System.out.println("List of stored keys:: " + s);
+		}
+
 	}
 }
