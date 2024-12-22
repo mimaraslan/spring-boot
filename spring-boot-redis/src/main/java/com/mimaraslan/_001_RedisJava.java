@@ -7,6 +7,7 @@ public class _001_RedisJava {
 		
 		// Connecting to Redis server on localhost
 		Jedis jedis = new Jedis("localhost");
+
 		System.out.println("Connection to server sucessfully");
 
 		// check whether server is running or not
